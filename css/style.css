@@ -149,6 +149,11 @@ a:hover, a:focus, a:active, a:visited {
     color: #016cc7;
 }
 
+.feature img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
 .speaker .feature {
 	width: 31.333333%;
 	-webkit-transition: all 0.3s;
@@ -282,6 +287,11 @@ ul.footer-menu li a:hover {
     transform: translateY(-30%);
     padding-right: 1px;
     padding-left: 0;
+}
+
+.footer-arrow:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 
