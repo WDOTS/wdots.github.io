@@ -154,6 +154,10 @@ a:hover, a:focus, a:active, a:visited {
     max-height: 100px;
 }
 
+.feature .fa:hover {
+    opacity: 0.7;
+}
+
 .speaker .feature {
 	width: 31.333333%;
 	-webkit-transition: all 0.3s;
@@ -194,6 +198,7 @@ a i.fa {
 	background-color: #C0D9AF;
     padding-top: 50px;
     padding-bottom: 75px;
+    height: 80vh;
 }
 
 .hello-block p {
