@@ -8,18 +8,15 @@ $(document).ready(function(){
     
     var windowHeight = $(window).height();
     
-    // what is the percentage down the page
-    
-    var scrollHeight = documentHeight - windowHeight;
-    
 	//Check to see if the window is top if not then display button
 	$(window).scroll(function(){
-		if ($(this).scrollTop() > (documentHeight - windowHeight - 100)) {
-			$('.scrollToTop').fadeIn("slow");
-		} else {
-			
-		}
-	});
+		if ($(this).scrollTop() > (documentHeight - windowHeight)) {
+			$('.scrollToTop').delay(600).animate({
+                opacity: 1,
+                duration: 600
+            });
+        }
+    });
 	
 	//Click event to scroll to top
 	$('.scrollToTop').click(function(){
