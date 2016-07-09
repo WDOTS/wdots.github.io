@@ -4,6 +4,14 @@
         "import"
     ],
     "rules": {
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "prefer-arrow-callback": "off",
+        "func-names": "off",
+        "no-var": "off",
+        "comma-dangle": "off",
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    },
+    "globals": {
+        "$": true
     }
 }
