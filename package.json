@@ -5,7 +5,11 @@
   "main": "Gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node" : "~6.3.0"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,9 @@
   "homepage": "https://github.com/WDOTS/wdots.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
+    "eslint": "^3.0.1",
+    "eslint-config-airbnb-base": "^4.0.0",
+    "eslint-plugin-import": "^1.10.2",
     "gulp": "^3.9.1"
   }
 }
