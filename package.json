@@ -20,6 +20,7 @@
   "homepage": "https://github.com/WDOTS/wdots.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
+    "eslint": "^3.0.1",
     "gulp": "^3.9.1"
   }
 }

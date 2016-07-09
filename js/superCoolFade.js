@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $(document).on("scroll", function handler() {
         if ($('.reason').visible(true)) {
             $(".reason").delay(600).animate({
