@@ -17,7 +17,7 @@ $(document).ready(function(){
 		if ($(this).scrollTop() > (documentHeight - windowHeight - 100)) {
 			$('.scrollToTop').fadeIn("slow");
 		} else {
-			$('.scrollToTop').fadeOut();
+			
 		}
 	});
 	
