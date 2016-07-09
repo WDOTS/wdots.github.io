@@ -12,6 +12,7 @@ ul {
 	padding: 0;
 	list-style: none;
 }
+
 a {
 	-webkit-transition: all 0.3s;
   	-moz-transition: all 0.3s;
@@ -51,6 +52,53 @@ a:hover, a:focus, a:active, a:visited {
 .content-ct {
 	text-align: center;
 }
+
+/* Buttons */
+
+.atc-style-blue .atcb-link {
+    font-family: 'Dosis', sans-serif;
+    padding: 15px 40px;
+    font-size: 16px;
+    background: #5cb85c;
+    border-color: #4cae4c;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.atc-style-blue .atcb-link:hover,
+.atc-style-blue .atcb-link:active,
+.atc-style-blue .atcb-link:focus {
+    font-family: 'Dosis', sans-serif;
+    padding: 15px 40px;
+    font-size: 16px;
+    background-color: #449d44;
+    cursor: pointer;
+    font-weight: 600;  
+}
+
+.atc-style-blue .atcb-item.hover,
+.atc-style-blue .atcb-item,
+.atc-style-blue .atcb-item-link {
+    font-family: 'Dosis', sans-serif; 
+}
+
+.atc-style-blue .atcb-item:hover {
+    background: #5cb85c;
+    font-family: 'Dosis', sans-serif; 
+}
+
+.atc-style-blue .atcb-item-link:hover {
+    font-family: 'Dosis', sans-serif; 
+}
+
+.atc-style-blue .atcb-item-link {
+    transition: none;
+}
+
+.tickets .hello-block .atc-style-blue .atcb-list .atcb-link-item {
+    margin-bottom: 0;
+}
+
+.socialButton
 
 /* ------------------
 	Navigation 
@@ -210,11 +258,15 @@ a i.fa {
     margin-bottom: 1em;
 }
 
+
+
 .tickets .hello-block h3,
-.tickets .hello-block a,
+.tickets .hello-block .socialButton,
 .tickets .hello-block p {
     margin-bottom: 1.333em;
 }
+
+
 
 .tickets .price {
 	font-size: 4em;

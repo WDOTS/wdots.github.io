@@ -12,9 +12,10 @@
   
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet">
-  <link href="css/font-awsome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/atc-style.css" rel="stylesheet">
   <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,6 +25,17 @@
       <![endif]-->
     </head>
     <body id="page-top" data-spy="scroll" data-target=".side-menu">
+        
+        <!-- JS add2cal -->
+        <script type="text/javascript">(function () {
+            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+                var h = d[g]('body')[0];h.appendChild(s); }})();
+    </script>
+        
       <nav class="side-menu">
         <ul>
           <li class="hidden active">
@@ -192,12 +204,12 @@
           <div class="col-md-4 col-sm-6 col-md-offset-2 hello-block">
             <h3>Slack</h3>
             <!-- ADD BUTTON -->
-              <a href="#" class="btn btn-lg btn-success">Join Slack Chat<span class="ti-arrow-right"></span></a>
+              <a href="#" class="btn btn-lg btn-success socialButton">Join Slack Chat<span class="ti-arrow-right"></span></a>
               <p>Get to know the group online or find out more about the Meetup via <a href="https://slack.com/">Slack</a></p>
           </div>
           <div class="col-md-4 col-sm-6 hello-block">
             <h3>Meetup</h3>
-            <span class="addtocalendar atc-style-blue">
+            <span class="addtocalendar atc-style-blue socialButton">
         <var class="atc_event">
             <var class="atc_date_start">2016-07-23 18:00:00</var>
             <var class="atc_date_end">2016-07-23 21:00:00</var>
@@ -231,13 +243,11 @@
       <!-- End: Footer -->
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="js/jquery.min.js"></script>
+     <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
-        
-      <script src="js/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
       <script src="js/scrolling-nav.js"></script>
-      <script src="js/validator.js"></script>
-      <script src="js/atc.min.js"></script>
+      
       <script src="js/upScroll.js"></script>
       <script src="js/superCoolFade.js"></script>
     </body>
