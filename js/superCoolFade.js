@@ -1,17 +1,17 @@
-$(document).ready(function(){
+$(document).ready(function () {
+    $(document).on("scroll", function handler() {
+        if ($('.reason').visible(true)) {
+            $(".reason").delay(600).animate({
+                    opacity: 1,
+                    top: "+=20",
+                },
+                1000,
+                "easeInOutBack"
+            );
 
-$(document).on("scroll", function () {
-    // how far down the page am i?
-    
-    var pixels = $(document).scrollTop()
-    
-    if (pixels > 600) {
-        $(".reason").one().fadeIn("slow").slideDown("slow", function() {
-        });
+            $(document).off('scroll', handler);
+        }
+
     });
-    }
- 
-});
-
 
 });

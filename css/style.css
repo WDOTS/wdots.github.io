@@ -403,6 +403,12 @@ ul.footer-menu li a:hover {
     animation-name: bounce; 
 }
 
+/* About */
+
+.reason {
+    opacity: 0;
+    position: relative;
+}
 /* ========================================
     Custom Media Queries
 ======================================== */
