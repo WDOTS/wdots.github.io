@@ -8,6 +8,9 @@
     "start": "gulp",
     "lint": "eslint ."
   },
+  "engines": {
+    "node" : "~6.3.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WDOTS/wdots.github.io.git"
