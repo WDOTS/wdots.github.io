@@ -242,7 +242,11 @@ a i.fa {
 	color: black;
     font-size: 5em;
 }
-
+.speaker-social-img {
+    width: 16px;
+    height: 16px;
+    fill: #000000;
+}
 
 .tickets {
 	background-color: #C0D9AF;
