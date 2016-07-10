@@ -245,6 +245,7 @@ a i.fa {
 .speaker-social-img {
     width: 16px;
     height: 16px;
+    fill: #000000;
 }
 
 .tickets {
