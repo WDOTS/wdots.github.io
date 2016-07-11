@@ -432,6 +432,10 @@ ul.footer-menu li a:hover {
         text-align: center;
         margin-top: 30px;
     }
+    .footer-credit .footer-arrow {
+        text-align: center;
+        margin-top: 20px;
+    }
 }
 
 
