@@ -506,4 +506,10 @@ ul.footer-menu li a:hover {
     .hero-header .logo {
         height: 110px;
     }
+    .hero-header h1 {
+        font-size: 2em;
+    }
+    .hero-header h3 {
+        font-size: 19px;
+    }
 }
