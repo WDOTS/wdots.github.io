@@ -56,6 +56,7 @@ a:hover, a:focus, a:active, a:visited {
 /* Buttons */
 
 .atc-style-blue .atcb-link {
+    border-radius: 4px;
     font-family: 'Dosis', sans-serif;
     padding: 15px 40px;
     font-size: 16px;
@@ -64,12 +65,19 @@ a:hover, a:focus, a:active, a:visited {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1.3333333;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
     
 }
 
 .atc-style-blue .atcb-link:hover,
 .atc-style-blue .atcb-link:active,
 .atc-style-blue .atcb-link:focus{
+    border-radius: 4px;
     cursor: pointer;
     background-color: #449d44;
     border-color: #398439;
@@ -79,6 +87,12 @@ a:hover, a:focus, a:active, a:visited {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1.3333333;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
     
 }
 
@@ -473,5 +487,23 @@ ul.footer-menu li a:hover {
     .speaker .feature {
         width: 49%;
         margin-right: 9px;
+    }
+}
+
+/* iPhone 5 and below */
+
+@media (max-width: 568px) and {
+    .hero-header h1 {
+        font-size: 2em;
+    }
+    .hero-header h3 {
+        font-size: 19px;
+    }
+}
+
+/* iPhone 4 */
+@media (max-width: 320px) {
+    .hero-header .logo {
+        height: 110px;
     }
 }
