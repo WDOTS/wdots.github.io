@@ -54,25 +54,34 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* Buttons */
-.atc-style-blue .atcb-link:hover,
-.atc-style-blue .atcb-link:active,
-.atc-style-blue .atcb-link:focus,
+
 .atc-style-blue .atcb-link {
     font-family: 'Dosis', sans-serif;
     padding: 15px 40px;
     font-size: 16px;
-    background: #5cb85c;
+    background-color: #5cb85c;
     border-color: #4cae4c;
     text-transform: uppercase;
     font-weight: 600;
+    line-height: 1.3333333;
+    
 }
 
- .atc-style-blue .atcb-link:hover,
+.atc-style-blue .atcb-link:hover,
 .atc-style-blue .atcb-link:active,
 .atc-style-blue .atcb-link:focus{
     cursor: pointer;
-
+    background-color: #449d44;
+    border-color: #398439;
+    font-family: 'Dosis', sans-serif;
+    padding: 15px 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.3333333;
+    
 }
+
 
 .atc-style-blue .atcb-item.hover,
 .atc-style-blue .atcb-item,
@@ -96,6 +105,8 @@ a:hover, a:focus, a:active, a:visited {
 .tickets .hello-block .atc-style-blue .atcb-list .atcb-link-item {
     margin-bottom: 0;
 }
+
+ 
 
 /* ------------------
 	Navigation
