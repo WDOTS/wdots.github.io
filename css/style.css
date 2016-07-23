@@ -165,6 +165,7 @@ a:hover, a:focus, a:active, a:visited {
 
 .hero-header {
 	background-image: url(../img/woods.jpg);
+    opacity: 0.9;
     background-color: rgba(0,0,0,.2);
 	min-height: 600px;
 	padding: 5em;
@@ -177,9 +178,10 @@ a:hover, a:focus, a:active, a:visited {
 }
 .hero-header h3 {
 	font-weight: normal;
-	opacity: 0.8;
+	opacity: 0.9;
     letter-spacing: 1px;
     margin: 2em 0;
+    text-shadow: 1px 1px #000000;
 }
 .hero-header .logo {
     max-width: 180px;
