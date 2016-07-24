@@ -71,7 +71,7 @@ a:hover, a:focus, a:active, a:visited {
     touch-action: manipulation;
     cursor: pointer;
     -webkit-user-select: none;
-    
+
 }
 
 .atc-style-blue .atcb-link:hover,
@@ -93,7 +93,7 @@ a:hover, a:focus, a:active, a:visited {
     touch-action: manipulation;
     cursor: pointer;
     -webkit-user-select: none;
-    
+
 }
 
 
@@ -120,7 +120,7 @@ a:hover, a:focus, a:active, a:visited {
     margin-bottom: 0;
 }
 
- 
+
 
 /* ------------------
 	Navigation
@@ -178,9 +178,8 @@ a:hover, a:focus, a:active, a:visited {
 
 
 .hero-header {
-	background-image: url(../img/woods.jpg);
-    opacity: 0.9;
-    background-color: rgba(0,0,0,.2);
+    position: relative;
+    overflow: hidden;
 	min-height: 600px;
 	padding: 5em;
 	color: #fff;
@@ -206,6 +205,12 @@ a:hover, a:focus, a:active, a:visited {
 }
 .hero-header .rocket {
 	max-width: 95%;
+}
+.hero-header__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
 }
 .me-row {
 	padding: 30px 0;
@@ -492,7 +497,7 @@ ul.footer-menu li a:hover {
 
 /* iPhone 5 and below */
 
-@media (max-width: 568px) and {
+@media (max-width: 568px) {
     .hero-header h1 {
         font-size: 2em;
     }
