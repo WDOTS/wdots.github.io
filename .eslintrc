@@ -3,6 +3,9 @@
     "plugins": [
         "import"
     ],
+    "env": {
+        "browser": true
+    },
     "rules": {
         "indent": ["error", 4],
         "prefer-arrow-callback": "off",
