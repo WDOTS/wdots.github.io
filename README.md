@@ -1,5 +1,7 @@
 # Web Devs of the Shire website
 
+[![Build Status](https://travis-ci.org/WDOTS/wdots.github.io.svg)](https://travis-ci.org/WDOTS/wdots.github.io)
+
 [http://wdots.github.io/](http://wdots.github.io/)
 
 ## Contribute
