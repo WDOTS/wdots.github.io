@@ -32,6 +32,8 @@ cd ..
 # Clean out existing contents
 rm -rf out/**/* || exit 0
 
+ls -al out
+
 # run our deploy script
 npm run deploy
 
@@ -39,8 +41,6 @@ npm run deploy
 cd out
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
-
-ls -al
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then
