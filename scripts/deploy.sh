@@ -2,7 +2,7 @@
 set -e # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="integration"
-TARGET_BRANCH="test-ci"
+TARGET_BRANCH="test-ci" # TODO: update to master
 
 #function doCompile {
   # TODO: add a build script here!
@@ -12,6 +12,7 @@ TARGET_BRANCH="test-ci"
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
     echo "Skipping deploy; just doing a build."
+    # TODO: reinstate
     # doCompile
     exit 0
 fi
@@ -32,7 +33,8 @@ cd ..
 rm -rf out/**/* || exit 0
 
 # Run our compile script
-doCompile
+# TODO: reinstate
+# doCompile
 
 # Now let's go have some fun with the cloned repo
 cd out
