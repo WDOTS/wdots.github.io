@@ -2,7 +2,7 @@
 set -e # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="integration"
-TARGET_BRANCH="test-ci" # TODO: update to master
+TARGET_BRANCH="master"
 
 #function doCompile {
   # TODO: add a build script here!
