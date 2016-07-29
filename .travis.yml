@@ -1,4 +1,9 @@
 language: node_js
 node_js:
-- "6.3"
-before_script: "npm run lint"
+- '6.3'
+before_script: npm run lint
+script: bash ./scripts/deploy.sh
+env:
+    global:
+    - ENCRYPTION_LABEL: "3a72f2594e6c"
+    - COMMIT_AUTHOR_LABEL: "simonadcock2@gmail.com"
