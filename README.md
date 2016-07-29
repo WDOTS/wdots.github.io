@@ -6,7 +6,7 @@
 
 ## Contribute
 
-Contributions to website are very welcome!
+Contributions to the website are very welcome!
 
 Clone the repo:
 
@@ -40,7 +40,8 @@ After you've made changes and committed them into Git, push your branch to Githu
 $ git push origin my-new-feature
 ```
 
-Then go to [our Github repo](https://github.com/WDOTS/wdots.github.io) and create a pull request.
+Then go to [our Github repo](https://github.com/WDOTS/wdots.github.io) and create a pull request against the
+`integration` branch.
 
 ## Guidelines
 
