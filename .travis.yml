@@ -5,5 +5,5 @@ before_script: npm run lint
 script: bash ./scripts/deploy.sh
 env:
     global:
-    - ENCRYPTION_LABEL: "3a72f2594e6c"
+    - ENCRYPTION_LABEL: "0601d1c19287"
     - COMMIT_AUTHOR_LABEL: "simonadcock2@gmail.com"
