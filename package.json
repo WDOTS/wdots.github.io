@@ -6,7 +6,8 @@
   "scripts": {
     "test": "exit 0",
     "start": "gulp",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "cp -a css img js index.html out/"
   },
   "engines": {
     "node" : "~6.3.0"
