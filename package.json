@@ -29,6 +29,7 @@
     "eslint-config-airbnb-base": "^4.0.0",
     "eslint-plugin-import": "^1.10.2",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.4",
