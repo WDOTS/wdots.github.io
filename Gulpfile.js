@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const shell = require('shelljs');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 
@@ -12,10 +13,10 @@ gulp.task('serve', ['build'], () => {
             baseDir: './'
         }
     });
-    gulp.watch('css/*.css', ['build:css']);
+    gulp.watch('css/*.css', ['clean', 'build:css']);
     gulp.watch('js/*.js', ['clean', 'build:js']);
 });
-gulp.task('build', ['clean', 'build:js']);
+gulp.task('build', ['clean', 'build:js', 'build:css']);
 gulp.task('clean', () => {
     shell.rm('-rf', 'build');
 });
@@ -30,5 +31,10 @@ gulp.task('build:js', () => {
 });
 gulp.task('build:css', () => {
     gulp.src('css/*.css')
-        .pipe(browserSync.stream());
+        .pipe(sourcemaps.init())
+        .pipe(cleanCSS())
+        .pipe(concat('style.css'))
+        .pipe(sourcemaps.write('maps/'))
+        .pipe(browserSync.stream())
+        .pipe(gulp.dest('build/css/'));
 });
