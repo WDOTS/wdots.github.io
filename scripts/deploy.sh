@@ -7,7 +7,6 @@ TARGET_BRANCH="master"
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
     echo "Skipping deploy; just doing a build."
-    npm run build
     exit 0
 fi
 
@@ -26,8 +25,7 @@ cd ..
 # Clean out existing contents
 rm -rf out/* || exit 0
 
-# Build and copy servable content into out/
-npm run build
+# Copy servable content into out/
 cp -a css img build index.html out/
 
 # Now let's go have some fun with the cloned repo
