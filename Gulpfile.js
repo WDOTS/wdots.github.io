@@ -13,9 +13,9 @@ gulp.task('serve', ['build'], () => {
             baseDir: './'
         }
     });
-    gulp.watch('css/*.css', ['build:css']);
-    gulp.watch('js/*.js', ['build:js']);
-    gulp.watch('templates/*.html', ['build:html']);
+    gulp.watch('src/css/*.css', ['build:css']);
+    gulp.watch('src/js/*.js', ['build:js']);
+    gulp.watch('src/templates/*.html', ['build:html']);
 });
 gulp.task('build', ['clean', 'build:html', 'build:js', 'build:css']);
 gulp.task('clean', () => {
@@ -23,7 +23,7 @@ gulp.task('clean', () => {
     shell.rm('-f', 'index.html');
 });
 gulp.task('build:js', () => {
-    gulp.src('js/*.js')
+    gulp.src('src/js/*.js')
         .pipe(sourcemaps.init())
         .pipe(uglify({ mangle: false }))
         .pipe(concat('main.js'))
@@ -32,7 +32,7 @@ gulp.task('build:js', () => {
         .pipe(gulp.dest('build/js/'));
 });
 gulp.task('build:css', () => {
-    gulp.src('css/*.css')
+    gulp.src('src/css/*.css')
         .pipe(sourcemaps.init())
         .pipe(cleanCSS())
         .pipe(concat('style.css'))
@@ -41,7 +41,7 @@ gulp.task('build:css', () => {
         .pipe(gulp.dest('build/css/'));
 });
 gulp.task('build:html', () => {
-    gulp.src('templates/index.html')
+    gulp.src('src/templates/index.html')
         .pipe(browserSync.stream())
         .pipe(gulp.dest('./'));
 });
