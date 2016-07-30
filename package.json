@@ -7,7 +7,7 @@
     "test": "exit 0",
     "start": "gulp",
     "lint": "eslint .",
-    "deploy": "cp -a css img js index.html out/"
+    "build": "gulp build"
   },
   "engines": {
     "node": "~6.3.0"
