@@ -22,8 +22,8 @@ gulp.task('clean', () => {
 gulp.task('build:js', () => {
     gulp.src('js/*.js')
         .pipe(sourcemaps.init())
-            .pipe(uglify({ mangle: false }))
-            .pipe(concat('main.js'))
+        .pipe(uglify({ mangle: false }))
+        .pipe(concat('main.js'))
         .pipe(sourcemaps.write('maps/'))
         .pipe(browserSync.stream())
         .pipe(gulp.dest('build/js/'));
