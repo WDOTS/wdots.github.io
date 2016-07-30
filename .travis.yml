@@ -2,7 +2,8 @@ language: node_js
 node_js:
 - '6.3'
 before_script: npm run lint
-script: bash ./scripts/deploy.sh
+script: npm run build
+after_success: bash ./scripts/deploy.sh
 env:
     global:
     - ENCRYPTION_LABEL: "0601d1c19287"
