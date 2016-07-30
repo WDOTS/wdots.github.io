@@ -10,7 +10,7 @@
     "deploy": "cp -a css img js index.html out/"
   },
   "engines": {
-    "node" : "~6.3.0"
+    "node": "~6.3.0"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "eslint": "^3.0.1",
     "eslint-config-airbnb-base": "^4.0.0",
     "eslint-plugin-import": "^1.10.2",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "shelljs": "^0.7.3"
   }
 }

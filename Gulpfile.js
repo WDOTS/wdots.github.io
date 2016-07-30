@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const shell = require('shelljs');
 const browserSync = require('browser-sync').create();
 
 gulp.task('default', ['serve']);
@@ -9,9 +10,12 @@ gulp.task('serve', ['build'], () => {
         }
     });
     gulp.watch('css/*.css', ['build:css']);
-    gulp.watch('js/*.js', ['build:js']);
+    gulp.watch('js/*.js', ['clean', 'build:js']);
 });
-gulp.task('build', ['build:js']);
+gulp.task('build', ['clean', 'build:js']);
+gulp.task('clean', () => {
+    shell.rm('-rf', 'build');
+});
 gulp.task('build:js', () => {
     gulp.src('js/*.js')
         .pipe(browserSync.stream())
