@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const shell = require('shelljs');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 
 gulp.task('default', ['serve']);
@@ -20,8 +21,10 @@ gulp.task('clean', () => {
 });
 gulp.task('build:js', () => {
     gulp.src('js/*.js')
-        .pipe(uglify())
-        .pipe(concat('main.js'))
+        .pipe(sourcemaps.init())
+            .pipe(uglify({ mangle: false }))
+            .pipe(concat('main.js'))
+        .pipe(sourcemaps.write('maps/'))
         .pipe(browserSync.stream())
         .pipe(gulp.dest('build/js/'));
 });
