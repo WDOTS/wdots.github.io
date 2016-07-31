@@ -12,3 +12,4 @@ env:
   global:
   - ENCRYPTION_LABEL: 0601d1c19287
   - COMMIT_AUTHOR_LABEL: simonadcock2@gmail.com
+  - NODE_ENV: production

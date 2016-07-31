@@ -6,6 +6,9 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const template = require('gulp-template');
 const browserSync = require('browser-sync').create();
+const isDev = function () {
+    return process.env.NODE_ENV !== 'production';
+};
 
 gulp.task('default', ['serve']);
 gulp.task('serve', ['build'], () => {
@@ -18,12 +21,16 @@ gulp.task('serve', ['build'], () => {
     gulp.watch('src/js/*.js', ['build:js']);
     gulp.watch('src/templates/*.html', ['build:html']);
 });
-gulp.task('build', ['clean', 'build:html', 'build:js', 'build:css']);
+gulp.task('build', ['clean', 'build:html', 'build:js', 'build:css', 'build:fonts']);
 gulp.task('clean', () => {
     shell.rm('-rf', 'build');
     shell.rm('-f', 'index.html');
 });
 gulp.task('build:js', () => {
+    if (isDev()) {
+        gulp.src('src/js/vendor/*.js')
+            .pipe(gulp.dest('build/js/vendor'));
+    }
     gulp.src('src/js/*.js')
         .pipe(sourcemaps.init())
         .pipe(uglify({ mangle: false }))
@@ -33,6 +40,10 @@ gulp.task('build:js', () => {
         .pipe(gulp.dest('build/js/'));
 });
 gulp.task('build:css', () => {
+    if (isDev()) {
+        gulp.src(['src/css/vendor/*.css', 'src/css/vendor/*.map'])
+            .pipe(gulp.dest('build/css/vendor'));
+    }
     gulp.src('src/css/*.css')
         .pipe(sourcemaps.init())
         .pipe(cleanCSS())
@@ -43,8 +54,23 @@ gulp.task('build:css', () => {
 });
 gulp.task('build:html', () => {
     const data = {
-        assetPath: 'build',
-        vendorPaths: {
+        assetPath: 'build'
+    };
+
+    if (isDev()) {
+        data.vendorPaths = {
+            jquery: 'build/js/vendor/jquery-3.1.0.min.js',
+            jqueryEasing: 'build/js/vendor/jquery.easing.min.js',
+            jqueryVisible: 'build/js/vendor/jquery.visible.min.js',
+            bootstrap: 'build/css/vendor/bootstrap.min.css',
+            addToCalendarCss: 'build/css/vendor/atc-style-blue.css',
+            dosis: 'build/css/vendor/dosis.css',
+            html5Shiv: 'build/js/vendor/html5shiv.min.js',
+            respond: 'build/js/vendor/respond.min.js',
+            addToCalendarJs: 'build/js/vendor/atc.min.js'
+        };
+    } else {
+        data.vendorPaths = {
             jquery: 'https://code.jquery.com/jquery-3.1.0.min.js',
             jqueryEasing: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
             jqueryVisible: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js',
@@ -54,11 +80,16 @@ gulp.task('build:html', () => {
             html5Shiv: 'https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
             respond: 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js',
             addToCalendarJs: 'https://addtocalendar.com/atc/1.5/atc.min.js'
-        }
-    };
-
+        };
+    }
     gulp.src('src/templates/index.html')
         .pipe(template(data))
         .pipe(browserSync.stream())
         .pipe(gulp.dest('./'));
+});
+gulp.task('build:fonts', () => {
+    if (isDev()) {
+        shell.mkdir('-p', 'build/fonts/');
+        shell.cp('src/fonts/*.woff2', 'build/fonts/');
+    }
 });
