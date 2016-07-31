@@ -212,6 +212,10 @@ a:hover, a:focus, a:active, a:visited {
     left: 0;
     opacity: .9;
 }
+/* Generated addtocalendar dropdown */
+.hero-header .addtocalendar ul {
+    position: relative;
+}
 .me-row {
 	padding: 30px 0;
 }
