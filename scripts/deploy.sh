@@ -26,7 +26,7 @@ cd ..
 rm -rf out/* || exit 0
 
 # Copy servable content into out/
-cp -a img build index.html out/
+cp -a build index.html out/
 
 # Now let's go have some fun with the cloned repo
 cd out

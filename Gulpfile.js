@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const shell = require('shelljs');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const cleanCSS = require('gulp-clean-css');
+const cleanCss = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const template = require('gulp-template');
 const browserSync = require('browser-sync').create();
@@ -21,7 +21,7 @@ gulp.task('serve', ['build'], () => {
     gulp.watch('src/js/*.js', ['build:js']);
     gulp.watch('src/templates/*.html', ['build:html']);
 });
-gulp.task('build', ['clean', 'build:html', 'build:js', 'build:css', 'build:fonts']);
+gulp.task('build', ['clean', 'build:html', 'build:js', 'build:css', 'build:fonts', 'build:images']);
 gulp.task('clean', () => {
     shell.rm('-rf', 'build');
     shell.rm('-f', 'index.html');
@@ -46,7 +46,7 @@ gulp.task('build:css', () => {
     }
     gulp.src('src/css/*.css')
         .pipe(sourcemaps.init())
-        .pipe(cleanCSS())
+        .pipe(cleanCss())
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('maps/'))
         .pipe(browserSync.stream())
@@ -92,4 +92,8 @@ gulp.task('build:fonts', () => {
         shell.mkdir('-p', 'build/fonts/');
         shell.cp('src/fonts/*.woff2', 'build/fonts/');
     }
+});
+gulp.task('build:images', () => {
+    shell.mkdir('-p', 'build/img/');
+    shell.cp('src/img/*', 'build/img/');
 });
