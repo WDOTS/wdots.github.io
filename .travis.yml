@@ -1,10 +1,14 @@
 language: node_js
 node_js:
-- '6.3'
+  - '6.3'
 before_script: npm run lint
 script: npm run build
 after_success: bash ./scripts/deploy.sh
+notifications:
+  slack:
+    rooms:
+      secure: X611aWl0F4QHdMjcz2ojd9HDAoC+U/0LUIP7WpG9peyAf151OdMEtAvx+Nw0Jdd0CpvkCrLu7JmlTQprt5kNo8MG2O5L9FbGMNZAaMWCWyUeEop9c9o+LTY6TIl64V1MQfLzx/RgoYdbcPb4cGetvMKMl2og3SpVbS6K2iSGg2AI4q65ZNFMt/RozKMNYyIcvXRxJLrdNU61Ttz2mPzrOB3Og1q+QwQLtQEK+MjxPcdIbH1oj9glLIdMWXX2/LOSV4OgMd6Ht2xAk5VxArWQiHBfKZlg15p8crDmFoRANyjwOcMWxKZnOmHd0fDQ34c0GhwKejaFplNvkHNpWzYZB6XO3FXmf3AjBvkyWrWdSZFxt189zTCAYc9IIgCIVW77WVRRxW/Us6SfhvkbnUOiiZPhVyx+RrkUs1Hr1FvcbNmGkG6iqAm+5SvgRuz/bhX8mb9cRNrzKKGZ4R2bE+XYLJ+RX5jyLX70sBxLqAKKeWVU+zFbHpt50e2j6rTopRhJ37P7pPEGsdEbNay1O+QzziTCLBslEqEptARGDc5AaxisXJnjWK/6MUm2FvdJ67DhdIhfj301t0wCqg6wExl4cljcZmpiqhmO8gS5X2ohL9KSIgcZHTRHuxPrCKuAx4BzX/JGs8SVj2Fdcvt7Z9NFFpMtR7G0se+vKmwE7ZAI8XE=
 env:
-    global:
-    - ENCRYPTION_LABEL: "0601d1c19287"
-    - COMMIT_AUTHOR_LABEL: "simonadcock2@gmail.com"
+  global:
+  - ENCRYPTION_LABEL: 0601d1c19287
+  - COMMIT_AUTHOR_LABEL: simonadcock2@gmail.com
