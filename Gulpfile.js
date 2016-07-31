@@ -4,6 +4,7 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
+const template = require('gulp-template');
 const browserSync = require('browser-sync').create();
 
 gulp.task('default', ['serve']);
@@ -41,7 +42,23 @@ gulp.task('build:css', () => {
         .pipe(gulp.dest('build/css/'));
 });
 gulp.task('build:html', () => {
+    const data = {
+        assetPath: 'build',
+        vendorPaths: {
+            jquery: 'https://code.jquery.com/jquery-3.1.0.min.js',
+            jqueryEasing: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
+            jqueryVisible: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js',
+            bootstrap: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+            addToCalendarCss: 'http://addtocalendar.com/atc/1.5/atc-style-blue.css',
+            dosis: 'https://fonts.googleapis.com/css?family=Dosis',
+            html5Shiv: 'https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
+            respond: 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js',
+            addToCalendarJs: 'https://addtocalendar.com/atc/1.5/atc.min.js'
+        }
+    };
+
     gulp.src('src/templates/index.html')
+        .pipe(template(data))
         .pipe(browserSync.stream())
         .pipe(gulp.dest('./'));
 });
