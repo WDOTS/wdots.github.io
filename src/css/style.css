@@ -218,8 +218,8 @@ a:hover, a:focus, a:active, a:visited {
     position: relative;
 }
 /* Generated addtocalendar dropdown width */
-.addtocalendar ul {
-    width: 100% !important;
+.atc-style-blue .atcb-list {
+    width: 100%;
 }
 .me-row {
 	padding: 30px 0;
