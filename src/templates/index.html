@@ -51,13 +51,16 @@
   <div class="container-fluid">
     <!-- Start: Header -->
     <div class="row hero-header" id="home">
-      <img src="<%= assetPath %>/img/woods.jpg" class="hero-header__background" srcset="
-        <%= assetPath %>/img/woods-480.jpg 480w,
-        <%= assetPath %>/img/woods-640.jpg 640w,
-        <%= assetPath %>/img/woods-960.jpg 960w,
-        <%= assetPath %>/img/woods-1280.jpg 1280w,
-        <%= assetPath %>/img/woods.jpg
-      ">
+      <img src="<%= assetPath %>/img/woods.jpg"
+        class="hero-header__background"
+        sizes="100vw"
+        srcset="
+          <%= assetPath %>/img/woods-480.jpg 480w,
+          <%= assetPath %>/img/woods-640.jpg 640w,
+          <%= assetPath %>/img/woods-960.jpg 960w,
+          <%= assetPath %>/img/woods-1280.jpg 1280w,
+          <%= assetPath %>/img/woods.jpg
+        ">
       <div class="col-md-7">
         <img src="<%= assetPath %>/img/wdots_circle_big.svg" class="logo">
         <h1>Web Devs of the Shire</h1>
