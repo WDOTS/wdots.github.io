@@ -23,7 +23,7 @@
     "url": "https://github.com/WDOTS/wdots.github.io/issues"
   },
   "homepage": "https://github.com/WDOTS/wdots.github.io#readme",
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.13.0",
     "eslint": "^3.0.1",
     "eslint-config-airbnb-base": "^4.0.0",
