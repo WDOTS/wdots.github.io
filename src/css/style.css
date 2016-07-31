@@ -211,6 +211,7 @@ a:hover, a:focus, a:active, a:visited {
     top: 0;
     left: 0;
     opacity: .9;
+    min-height: 100%;
 }
 /* Header generated addtocalendar dropdown */
 .hero-header .addtocalendar ul {
