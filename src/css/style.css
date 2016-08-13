@@ -379,7 +379,7 @@ ul.footer-menu li a:hover {
 .footer-arrow-img {
     height: 32px;
     width: 48px;
-    opacity: .7;
+    opacity: 0;
 }
 
 .footer-arrow-img:hover {
