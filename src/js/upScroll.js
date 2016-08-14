@@ -1,9 +1,7 @@
 $(document).ready(function () {
-    var documentHeight = $(document).height();
-    var windowHeight = $(window).height();
     var $arrow = $('.footer-arrow-img');
     var showArrow = function () {
-        if ($(this).scrollTop() > (documentHeight - windowHeight)) {
+        if ($arrow.visible(true)) {
             $arrow.delay(600).animate({
                 opacity: 0.7,
                 duration: 600
