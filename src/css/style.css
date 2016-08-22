@@ -240,6 +240,12 @@ a:hover, a:focus, a:active, a:visited {
     opacity: 0.7;
 }
 
+.next-meetup-img {
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+}
+
 .speaker .feature {
 	width: 31.333333%;
 	-webkit-transition: all 0.3s;
