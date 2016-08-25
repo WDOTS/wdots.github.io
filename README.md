@@ -48,3 +48,4 @@ Then go to [our Github repo](https://github.com/WDOTS/wdots.github.io) and creat
 - Before committing, please run `npm run lint` and ensure there are no linting errors or warnings
 - Before raising a pull request please test that the website works in the latest version
  of all major browsers (Chrome, Firefox, Safari, Edge)
+- Before merging a pull request, wait for the build to pass and at least one thumbs-up from another member of WDOTS
