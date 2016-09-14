@@ -247,14 +247,24 @@ a:hover, a:focus, a:active, a:visited {
 	background-color: white	;
 }
 
-#next-meetup .nextMeetupBanner {
-	background-color: white;
-	border: dotted 3px green;
-	position: relative;
-	top: -30px;
-	left: 700px;
-	width: 25%;
+.nextMeetupBanner {
+    background-color: #fff;
+    border: 3px dotted green;
+		position: relative;
+    top: -10px;
+		width: 35%;
+    margin: 0 auto;
+	}
+    @media (min-width:869px) {
+			.nextMeetupBanner{
+        width: 30%;
+        margin: 0 20px 0;
+        float: right;
+				z-index: 2;
+
+    }
 }
+
 
 .nextMeetupInfoWraper{
 	width: 50%;
@@ -290,7 +300,13 @@ a:hover, a:focus, a:active, a:visited {
 	margin: 0;
 	padding: 0;
 	position: relative;
-	top: -90px;
+	top: -110px;
+}
+
+@media (min-width:870px) {
+#next-meetup .feature {
+	margin-right: 30px;
+}
 }
 
 #next-meetup .feature .addtocalendar {
