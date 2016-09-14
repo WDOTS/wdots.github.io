@@ -240,10 +240,74 @@ a:hover, a:focus, a:active, a:visited {
     opacity: 0.7;
 }
 
+
+/* Next Meetup */
+
+.nextMeetupwrapper {
+	background-color: white	;
+}
+
+#next-meetup .nextMeetupBanner {
+	background-color: white;
+	border: dotted 3px green;
+	position: relative;
+	top: -30px;
+	left: 700px;
+	width: 25%;
+}
+
+.nextMeetupInfoWraper{
+	width: 50%;
+}
+
+.nextMeetupInfo {
+	display: block;
+	padding: 0.5em;
+}
+
+.nextMeetupInfo h3 {
+	float: left;
+	border-bottom: solid 3px green;
+	line-height: 50px;
+}
+
+.nextMeetupInfo p {
+	float: left;
+	width: 100%;
+	text-align: left;
+	margin: 1em;
+}
+
 .next-meetup-img {
     width: 16px;
     height: 16px;
     vertical-align: top;
+}
+
+#next-meetup .feature {
+	width: 33.33%;
+	float: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: -90px;
+}
+
+#next-meetup .feature .addtocalendar {
+	overflow: visible;
+}
+
+#next-meetup .bannerLine {
+	background-color: #C5E3BF;
+	width: 100%;
+	height: 20px;
+	padding: 10px;
+	clear: both;
+}
+
+#next-meetup #topBanner {
+	position: relative;
+	top: 20px;
 }
 
 .speaker .feature {
