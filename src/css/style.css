@@ -251,19 +251,21 @@ a:hover, a:focus, a:active, a:visited {
     background-color: #fff;
     border: 3px dotted green;
 		position: relative;
-    top: -10px;
+    top: -13.9px;
 		width: 35%;
     margin: 0 auto;
+		padding: 4px;
 	}
-    @media (min-width:869px) {
+    @media (min-width:870px) {
 			.nextMeetupBanner{
         width: 30%;
         margin: 0 20px 0;
         float: right;
 				z-index: 2;
-
     }
 }
+
+
 
 
 .nextMeetupInfoWraper{
@@ -288,6 +290,14 @@ a:hover, a:focus, a:active, a:visited {
 	margin: 1em;
 }
 
+@media (min-width:870px) {
+	.nextMeetupInfoWrapper  {
+		width: 80%;
+}
+}
+
+
+
 .next-meetup-img {
     width: 16px;
     height: 16px;
@@ -295,19 +305,33 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 #next-meetup .feature {
-	width: 33.33%;
+	width: 100%;
 	float: right;
 	margin: 0;
 	padding: 0;
 	position: relative;
-	top: -110px;
+	top: -15px;
 }
 
 @media (min-width:870px) {
-#next-meetup .feature {
-	margin-right: 30px;
+	#next-meetup .feature {
+		width: 33.33%;
+		padding-bottom: 33.33px;
+		padding-top: 33.33px;
+		top: -110px;
+
+	}
+}
+
+
+
+@media (min-width:870px) {
+	#next-meetup .feature {
+		margin-right: 30px;
 }
 }
+
+
 
 #next-meetup .feature .addtocalendar {
 	overflow: visible;
@@ -325,6 +349,8 @@ a:hover, a:focus, a:active, a:visited {
 	position: relative;
 	top: 20px;
 }
+
+/* GROUP SECTION */
 
 .speaker .feature {
 	width: 31.333333%;
