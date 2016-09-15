@@ -292,7 +292,7 @@ a:hover, a:focus, a:active, a:visited {
 
 @media (min-width:870px) {
 	.nextMeetupInfoWrapper  {
-		width: 80%;
+		width: 100%;
 }
 }
 
