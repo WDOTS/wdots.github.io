@@ -5,6 +5,7 @@
 @import 'components/side-menu';
 @import 'modules/hero-header';
 @import 'modules/next-meetup';
+@import 'modules/tickets';
 
 .content-ct {
     text-align: center;
@@ -70,41 +71,6 @@ a i.fa {
     height: 16px;
     fill: #000000;
 }
-
-.tickets {
-	background-color: #C0D9AF;
-    padding-top: 50px;
-    padding-bottom: 75px;
-}
-
-.hello-block p {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.tickets .hello-title {
-    margin-bottom: 1em;
-}
-
-
-
-.tickets .hello-block h3,
-.tickets .hello-block .socialButton,
-.tickets .hello-block p {
-    margin-bottom: 1.333em;
-}
-
-
-
-.tickets .price {
-	font-size: 4em;
-	color: #dd5138;
-    font-weight: 100;
-}
-.tickets .price sup {
-	font-size: 0.4em;
-}
-
 
 .nav-tabs {
     margin-top: 20px;

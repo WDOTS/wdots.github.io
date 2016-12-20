@@ -1,0 +1,22 @@
+.tickets {
+    background-color: #c0d9af;
+    padding-top: 50px;
+    padding-bottom: 75px;
+
+    .hello-block {
+        p {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h3,
+        .socialButton,
+        p {
+            margin-bottom: 1.333em;
+        }
+    }
+
+    .hello-title {
+        margin-bottom: 1em;
+    }
+}
