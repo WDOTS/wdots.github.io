@@ -1,6 +1,7 @@
 @import 'base/base';
 @import 'components/add-to-calendar';
 @import 'components/button';
+@import 'components/feature';
 @import 'components/icon';
 @import 'components/reason';
 @import 'components/section';
@@ -10,20 +11,6 @@
 @import 'modules/speakers';
 @import 'modules/tickets';
 @import 'modules/footer';
-
-.feature {
-	padding: 20px;
-	margin-top: 30px;
-}
-
-.feature span {
-	font-size: 5em;
-    color: #016cc7;
-}
-
-/* ========================================
-    Custom Media Queries
-======================================== */
 
 /* Mobile */
 
@@ -49,7 +36,6 @@
     }
 }
 
-
 /* iPad Portrait */
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -65,7 +51,6 @@
         margin-top: 0;
     }
 }
-
 
 /* iPad Landscape */
 
