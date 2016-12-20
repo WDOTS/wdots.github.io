@@ -3,24 +3,13 @@
 @import 'components/button';
 @import 'components/icon';
 @import 'components/reason';
+@import 'components/section';
 @import 'components/side-menu';
 @import 'modules/hero-header';
 @import 'modules/next-meetup';
 @import 'modules/speakers';
 @import 'modules/tickets';
 @import 'modules/footer';
-
-.content-ct {
-    text-align: center;
-}
-
-.me-row {
-	padding: 30px 0;
-}
-
-.row-title {
-	font-weight: 400;
-}
 
 .feature {
 	padding: 20px;
