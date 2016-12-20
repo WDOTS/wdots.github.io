@@ -5,6 +5,7 @@
 @import 'components/side-menu';
 @import 'modules/hero-header';
 @import 'modules/next-meetup';
+@import 'modules/speakers';
 @import 'modules/tickets';
 @import 'modules/footer';
 
@@ -29,48 +30,6 @@
 
 .feature .fa:hover {
     opacity: 0.7;
-}
-
-/* GROUP SECTION */
-
-.speaker .feature {
-	width: 31.333333%;
-	-webkit-transition: all 0.3s;
-  	-moz-transition: all 0.3s;
-  	transition: all 0.3s;
-  	margin-right: 20px;
-  	border: 1px solid #f6f6f6;
-    border-radius: 5px;
-}
-.speaker .feature:hover {
-    box-shadow: 3px 3px 10px #ccc;
-    transform: translateY(-10px);
-}
-.speaker-img {
-	max-width: 40%;
-    border: 4px solid #efefef;
-    border-radius: 50%;
-}
-ul.speaker-social li {
-	list-style: none;
-	display: inline-block;
-	margin: 10px 5px;
-}
-ul.speaker-social li a {
-	font-size: 0.2em;
-	padding: 0 10px;
-}
-ul.speaker-social li a:hover {
-	text-decoration: none;
-}
-a i.fa {
-	color: black;
-    font-size: 5em;
-}
-.speaker-social-img {
-    width: 16px;
-    height: 16px;
-    fill: #000000;
 }
 
 .nav-tabs {

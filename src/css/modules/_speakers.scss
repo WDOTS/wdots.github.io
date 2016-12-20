@@ -1,0 +1,43 @@
+.speaker {
+    .feature {
+        width: 31.333333%;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        margin-right: 20px;
+        border: 1px solid #f6f6f6;
+        border-radius: 5px;
+
+        &:hover {
+            box-shadow: 3px 3px 10px #ccc;
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.speaker-img {
+    max-width: 40%;
+    border: 4px solid #efefef;
+    border-radius: 50%;
+}
+
+.speaker-social li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 5px;
+
+    a {
+        font-size: 0.2em;
+        padding: 0 10px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.speaker-social-img {
+    width: 16px;
+    height: 16px;
+    fill: #000000;
+}
