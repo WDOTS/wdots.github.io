@@ -1,4 +1,8 @@
 .atc-style-blue {
+    .atcb-list {
+        width: 100%;
+    }
+
     .atcb-link,
     .atcb-link:hover,
     .atcb-link:active,
@@ -40,8 +44,4 @@
     .atcb-item-link {
         transition: none;
     }
-}
-
-.tickets .hello-block .atc-style-blue .atcb-list .atcb-link-item {
-    margin-bottom: 0;
 }
