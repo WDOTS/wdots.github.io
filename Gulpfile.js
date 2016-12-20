@@ -18,7 +18,7 @@ gulp.task('serve', ['build'], () => {
             baseDir: './'
         }
     });
-    gulp.watch('src/css/*.css', ['build:css']);
+    gulp.watch('src/css/**/*.scss', ['build:css']);
     gulp.watch('src/js/*.js', ['build:js']);
     gulp.watch('src/templates/*.html', ['build:html']);
 });
