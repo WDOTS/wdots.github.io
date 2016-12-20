@@ -1,76 +1,10 @@
 @import 'base/base';
 @import 'components/_button';
+@import 'components/add-to-calendar';
 
 .content-ct {
     text-align: center;
 }
-
-.atc-style-blue .atcb-link {
-    border-radius: 4px;
-    font-family: 'Dosis', sans-serif;
-    padding: 15px 40px;
-    font-size: 16px;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-    text-transform: uppercase;
-    font-weight: 600;
-    line-height: 1.3333333;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-
-}
-
-.atc-style-blue .atcb-link:hover,
-.atc-style-blue .atcb-link:active,
-.atc-style-blue .atcb-link:focus{
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #449d44;
-    border-color: #398439;
-    font-family: 'Dosis', sans-serif;
-    padding: 15px 40px;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 600;
-    line-height: 1.3333333;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-
-}
-
-
-.atc-style-blue .atcb-item.hover,
-.atc-style-blue .atcb-item,
-.atc-style-blue .atcb-item-link {
-    font-family: 'Dosis', sans-serif;
-}
-
-.atc-style-blue .atcb-item:hover {
-    background: #5cb85c;
-    font-family: 'Dosis', sans-serif;
-}
-
-.atc-style-blue .atcb-item-link:hover {
-    font-family: 'Dosis', sans-serif;
-}
-
-.atc-style-blue .atcb-item-link {
-    transition: none;
-}
-
-.tickets .hello-block .atc-style-blue .atcb-list .atcb-link-item {
-    margin-bottom: 0;
-}
-
-
 
 /* ------------------
 	Navigation
