@@ -2,51 +2,13 @@
 @import 'components/_button';
 @import 'components/add-to-calendar';
 @import 'components/side-menu';
+@import 'modules/hero-header';
 
 .content-ct {
     text-align: center;
 }
 
-.hero-header {
-    position: relative;
-    overflow: hidden;
-	min-height: 600px;
-	padding: 5em;
-	color: #fff;
-}
-.hero-header h1 {
-	margin: 1em 0 0 0;
-    font-weight: 300;
-    font-size: 4em;
-}
-.hero-header h3 {
-	font-weight: normal;
-	opacity: 0.9;
-    letter-spacing: 1px;
-    margin: 2em 0;
-    text-shadow: 1px 1px #000000;
-}
-.hero-header .logo {
-    max-width: 180px;
-    height: 180px;
-}
-.hero-header .btn {
-	margin-top: 3em;
-}
-.hero-header .rocket {
-	max-width: 95%;
-}
-.hero-header__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: .9;
-    min-height: 100%;
-}
-/* Header generated addtocalendar dropdown */
-.hero-header .addtocalendar ul {
-    position: relative;
-}
+
 /* Generated addtocalendar dropdown width */
 .atc-style-blue .atcb-list {
     width: 100%;
