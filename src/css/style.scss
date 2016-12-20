@@ -1,4 +1,5 @@
 @import 'base/base';
+@import 'base/variables';
 @import 'components/add-to-calendar';
 @import 'components/button';
 @import 'components/feature';
@@ -14,7 +15,7 @@
 
 /* Mobile */
 
-@media (max-width: 767px) {
+@media (max-width: $width-mobile-max) {
     .hero-header {
         padding: 3em 1em 1em 1em;
         text-align: center;
@@ -38,7 +39,7 @@
 
 /* iPad Portrait */
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: $width-ipad-min) and (max-width: $width-ipad-max) {
     .hero-header {
         padding: 3em 1em 1em 1em;
         text-align: center;
@@ -54,7 +55,7 @@
 
 /* iPad Landscape */
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: $width-ipad-landscape-min) and (max-width: $width-ipad-landscape-max) {
     .speaker .feature {
         width: 49%;
         margin-right: 9px;
@@ -63,7 +64,7 @@
 
 /* iPhone 5 and below */
 
-@media (max-width: 568px) {
+@media (max-width: $width-iphone-5-max) {
     .hero-header h1 {
         font-size: 2em;
     }
@@ -73,7 +74,7 @@
 }
 
 /* iPhone 4 */
-@media (max-width: 320px) {
+@media (max-width: $width-iphone-4-max) {
     .hero-header .logo {
         height: 110px;
     }
