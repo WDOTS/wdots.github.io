@@ -3,6 +3,7 @@ const shell = require('shelljs');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const cleanCss = require('gulp-clean-css');
+const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const template = require('gulp-template');
 const browserSync = require('browser-sync').create();
@@ -17,7 +18,7 @@ gulp.task('serve', ['build'], () => {
             baseDir: './'
         }
     });
-    gulp.watch('src/css/*.css', ['build:css']);
+    gulp.watch('src/css/**/*.scss', ['build:css']);
     gulp.watch('src/js/*.js', ['build:js']);
     gulp.watch('src/templates/*.html', ['build:html']);
 });
@@ -44,8 +45,9 @@ gulp.task('build:css', () => {
         gulp.src(['src/css/vendor/*.css', 'src/css/vendor/*.map'])
             .pipe(gulp.dest('build/css/vendor'));
     }
-    gulp.src('src/css/*.css')
+    gulp.src('src/css/style.scss')
         .pipe(sourcemaps.init())
+        .pipe(sass())
         .pipe(cleanCss())
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('maps/'))

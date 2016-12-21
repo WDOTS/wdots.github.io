@@ -1,0 +1,47 @@
+.atc-style-blue {
+    .atcb-list {
+        width: 100%;
+    }
+
+    .atcb-link,
+    .atcb-link:hover,
+    .atcb-link:active,
+    .atcb-link:focus {
+        border-radius: 4px;
+        font-family: 'Dosis', sans-serif;
+        padding: 15px 40px;
+        font-size: 16px;
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 1.3333333;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+    }
+
+    .atcb-link:hover,
+    .atcb-link:active,
+    .atcb-link:focus{
+        background-color: #449d44;
+        border-color: #398439;
+    }
+
+    .atcb-item,
+    .atcb-item-link,
+    .atcb-item-link:hover {
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .atcb-item:hover {
+        background: #5cb85c;
+    }
+
+    .atcb-item-link {
+        transition: none;
+    }
+}

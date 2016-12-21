@@ -1,0 +1,87 @@
+@import 'base/base';
+@import 'base/variables';
+@import 'components/add-to-calendar';
+@import 'components/button';
+@import 'components/feature';
+@import 'components/icon';
+@import 'components/reason';
+@import 'components/section';
+@import 'components/side-menu';
+@import 'modules/hero-header';
+@import 'modules/next-meetup';
+@import 'modules/speakers';
+@import 'modules/tickets';
+@import 'modules/footer';
+
+/* Mobile */
+
+@media (max-width: $width-mobile-max) {
+    .hero-header {
+        padding: 3em 1em 1em 1em;
+        text-align: center;
+    }
+    .speaker .feature {
+        width: 100%
+    }
+    .footer-credit {
+        text-align: center;
+        padding: 40px 20px;
+    }
+    ul.footer-menu {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .footer-credit .footer-arrow {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* iPad Portrait */
+
+@media (min-width: $width-ipad-min) and (max-width: $width-ipad-max) {
+    .hero-header {
+        padding: 3em 1em 1em 1em;
+        text-align: center;
+    }
+    .speaker .feature {
+        width: 49%;
+        margin-right: 7px;
+    }
+    ul.footer-menu {
+        margin-top: 0;
+    }
+}
+
+/* iPad Landscape */
+
+@media (min-width: $width-ipad-landscape-min) and (max-width: $width-ipad-landscape-max) {
+    .speaker .feature {
+        width: 49%;
+        margin-right: 9px;
+    }
+}
+
+/* iPhone 5 and below */
+
+@media (max-width: $width-iphone-5-max) {
+    .hero-header h1 {
+        font-size: 2em;
+    }
+    .hero-header h3 {
+        font-size: 19px;
+    }
+}
+
+/* iPhone 4 */
+@media (max-width: $width-iphone-4-max) {
+    .hero-header .logo {
+        height: 110px;
+    }
+    .hero-header h1 {
+        font-size: 2em;
+    }
+    .hero-header h3 {
+        font-size: 19px;
+    }
+}
