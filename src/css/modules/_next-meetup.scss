@@ -2,34 +2,29 @@
     padding: 0.5em;
 }
 
-.next-meetup__banner-line {
-    background-color: #c5e3bf;
-    width: 100%;
-    height: 20px;
-    padding: 10px;
-    clear: both;
-    position: relative;
-    top: 20px;
-}
-
 .next-meetup__banner {
     height: 0;
+
+    &::before {
+        content: '';
+        display: block;
+        background-color: #c5e3bf;
+        height: 20px;
+    }
 }
 
 .next-meetup__banner__heading {
     display: inline-block;
     position: relative;
-    top: -13.9px;
+    top: -33px;
     background-color: #ffffff;
     border: 3px dotted green;
-    text-align: center;
-    margin: 0 20px 0;
+    margin: 0;
     padding: 4px 48px;
 }
 
 .next-meetup__info, .next-meetup__where-and-when {
     display: inline-block;
-    width: 100%;
 }
 
 .next-meetup__info {
@@ -48,18 +43,13 @@
     line-height: 50px;
 }
 
-.next-meetup__where-and-when {
-    margin: 0;
-    padding: 0;
-
-    .addtocalendar {
-        overflow: visible;
-    }
-}
-
 @media (min-width: $width-ipad-landscape-min) {
     .next-meetup__banner {
         text-align: right;
+    }
+
+    .next-meetup__banner__heading {
+        margin-right: 20px;
     }
 
     .next-meetup__info, .next-meetup__where-and-when {
