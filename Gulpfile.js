@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const template = require('gulp-template');
 const browserSync = require('browser-sync').create();
+
 const isDev = function () {
     return process.env.NODE_ENV !== 'production';
 };
