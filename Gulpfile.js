@@ -6,6 +6,7 @@ const cleanCss = require('gulp-clean-css');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const template = require('gulp-template');
+const htmlmin = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
 
 const isDev = function () {
@@ -87,6 +88,10 @@ gulp.task('build:html', () => {
     }
     gulp.src('src/templates/index.html')
         .pipe(template(data))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            conservativeCollapse: true
+        }))
         .pipe(browserSync.stream())
         .pipe(gulp.dest('./'));
 });
