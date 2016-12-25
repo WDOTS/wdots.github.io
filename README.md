@@ -34,6 +34,17 @@ $ npm start
 
 Navigate to [http://localhost:3000](http://localhost:3000) and implement your changes!
 
+### Production mode
+
+You can also start the dev server in production mode. This runs an HTTPS server, and uses vendor assets served from 
+CDNs, rather than local assets.
+
+```
+$ NODE_ENV=production npm start
+```
+
+### Push
+
 After you've made changes and committed them into Git, push your branch to Github:
 
 ```
@@ -48,4 +59,4 @@ Then go to [our Github repo](https://github.com/WDOTS/wdots.github.io) and creat
 - Before committing, please run `npm run lint` and ensure there are no linting errors or warnings
 - Before raising a pull request please test that the website works in the latest version
  of all major browsers (Chrome, Firefox, Safari, Edge)
-- Before merging a pull request, wait for the build to pass and at least one thumbs-up from another member of WDOTS
+- Before merging a pull request, wait for the build to pass and request a review from at least one other member of WDOTS

@@ -6,7 +6,9 @@ const cleanCss = require('gulp-clean-css');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const template = require('gulp-template');
+const htmlmin = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
+
 const isDev = function () {
     return process.env.NODE_ENV !== 'production';
 };
@@ -16,7 +18,8 @@ gulp.task('serve', ['build'], () => {
     browserSync.init({
         server: {
             baseDir: './'
-        }
+        },
+        https: !isDev()
     });
     gulp.watch('src/css/**/*.scss', ['build:css']);
     gulp.watch('src/js/*.js', ['build:js']);
@@ -73,19 +76,23 @@ gulp.task('build:html', () => {
         };
     } else {
         data.vendorPaths = {
-            jquery: 'https://code.jquery.com/jquery-3.1.0.min.js',
-            jqueryEasing: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
-            jqueryVisible: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js',
-            bootstrap: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-            addToCalendarCss: 'http://addtocalendar.com/atc/1.5/atc-style-blue.css',
-            dosis: 'https://fonts.googleapis.com/css?family=Dosis',
-            html5Shiv: 'https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
-            respond: 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js',
-            addToCalendarJs: 'https://addtocalendar.com/atc/1.5/atc.min.js'
+            jquery: '//code.jquery.com/jquery-3.1.0.min.js',
+            jqueryEasing: '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
+            jqueryVisible: '//cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js',
+            bootstrap: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+            addToCalendarCss: '//addtocalendar.com/atc/1.5/atc-style-blue.css',
+            dosis: '//fonts.googleapis.com/css?family=Dosis',
+            html5Shiv: '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
+            respond: '//oss.maxcdn.com/respond/1.4.2/respond.min.js',
+            addToCalendarJs: '//addtocalendar.com/atc/1.5/atc.min.js'
         };
     }
     gulp.src('src/templates/index.html')
         .pipe(template(data))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            conservativeCollapse: true
+        }))
         .pipe(browserSync.stream())
         .pipe(gulp.dest('./'));
 });
