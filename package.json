@@ -4,6 +4,7 @@
   "description": "",
   "main": "Gulpfile.js",
   "scripts": {
+    "postinstall": "mkdir -p .git/hooks && cp git-hooks/* .git/hooks/",
     "test": "exit 0",
     "start": "gulp",
     "lint": "eslint .",
