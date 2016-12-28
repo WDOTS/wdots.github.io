@@ -51,8 +51,8 @@ gulp.task('build:css', () => {
     }
     gulp.src('src/css/style.scss')
         .pipe(sourcemaps.init())
-        .pipe(preprocess())
         .pipe(sass())
+        .pipe(preprocess())
         .pipe(cleanCss())
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('maps/'))
