@@ -71,7 +71,7 @@ gulp.task('build:html', () => {
             jqueryEasing: 'build/js/vendor/jquery.easing.min.js',
             jqueryVisible: 'build/js/vendor/jquery.visible.min.js',
             bootstrap: 'build/css/vendor/bootstrap.min.css',
-            addToCalendarCss: 'build/css/vendor/atc-style-blue.css',
+            addToCalendarCss: 'build/css/vendor/atc-base.css',
             html5Shiv: 'build/js/vendor/html5shiv.min.js',
             respond: 'build/js/vendor/respond.min.js',
             addToCalendarJs: 'build/js/vendor/atc.min.js'
@@ -82,7 +82,7 @@ gulp.task('build:html', () => {
             jqueryEasing: '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
             jqueryVisible: '//cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js',
             bootstrap: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-            addToCalendarCss: '//addtocalendar.com/atc/1.5/atc-style-blue.css',
+            addToCalendarCss: '//addtocalendar.com/atc/1.5/atc-base.css',
             html5Shiv: '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
             respond: '//oss.maxcdn.com/respond/1.4.2/respond.min.js',
             addToCalendarJs: '//addtocalendar.com/atc/1.5/atc.min.js'
