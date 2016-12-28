@@ -1,3 +1,13 @@
+// Fonts
+/* @if NODE_ENV='production' */
+$dosis-latin-src: local('Dosis Regular'), local('Dosis-Regular'), url(https://fonts.gstatic.com/s/dosis/v6/oaBFj7Fz9Y9_eW3k9Jd9X6CWcynf_cDxXwCLxiixG1c.woff2) format('woff2');
+$dosis-latin-ext-src: local('Dosis Regular'), local('Dosis-Regular'), url(https://fonts.gstatic.com/s/dosis/v6/3isE9muMMOq1K7TQ7HkKvIDGDUGfDkXyfkzVDelzfFk.woff2) format('woff2');
+/* @else */
+$dosis-latin-src: local('Dosis Regular'), local('Dosis-Regular'), url(../fonts/dosis-latin.woff2) format('woff2');
+$dosis-latin-ext-src: local('Dosis Regular'), local('Dosis-Regular'), url(../fonts/dosis-latin-ext.woff2) format('woff2');
+/* @endif */
+
+// Media queries
 $width-ipad-landscape-max: 1199px;
 $width-ipad-landscape-min: 992px;
 $width-ipad-max: 991px;

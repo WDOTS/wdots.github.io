@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const template = require('gulp-template');
 const htmlmin = require('gulp-htmlmin');
+const preprocess = require('gulp-preprocess');
 const browserSync = require('browser-sync').create();
 
 const isDev = function () {
@@ -50,6 +51,7 @@ gulp.task('build:css', () => {
     }
     gulp.src('src/css/style.scss')
         .pipe(sourcemaps.init())
+        .pipe(preprocess())
         .pipe(sass())
         .pipe(cleanCss())
         .pipe(concat('style.css'))
