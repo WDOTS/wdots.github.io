@@ -69,7 +69,6 @@ gulp.task('build:html', () => {
             jqueryVisible: 'build/js/vendor/jquery.visible.min.js',
             bootstrap: 'build/css/vendor/bootstrap.min.css',
             addToCalendarCss: 'build/css/vendor/atc-style-blue.css',
-            dosis: 'build/css/vendor/dosis.css',
             html5Shiv: 'build/js/vendor/html5shiv.min.js',
             respond: 'build/js/vendor/respond.min.js',
             addToCalendarJs: 'build/js/vendor/atc.min.js'
@@ -81,7 +80,6 @@ gulp.task('build:html', () => {
             jqueryVisible: '//cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js',
             bootstrap: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
             addToCalendarCss: '//addtocalendar.com/atc/1.5/atc-style-blue.css',
-            dosis: '//fonts.googleapis.com/css?family=Dosis',
             html5Shiv: '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
             respond: '//oss.maxcdn.com/respond/1.4.2/respond.min.js',
             addToCalendarJs: '//addtocalendar.com/atc/1.5/atc.min.js'
