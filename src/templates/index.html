@@ -19,37 +19,34 @@
 <body id="page-top" data-spy="scroll" data-target=".side-menu">
 <nav class="side-menu">
   <ul>
-    <li class="hidden active">
-      <a class="page-scroll" href="#page-top"></a>
-    </li>
-    <li>
+    <li class="side-menu__item">
       <a href="#home" class="page-scroll">
-        <span class="menu-title">Home</span>
-        <span class="dot"></span>
+        <span class="side-menu__item__title">Home</span>
+        <span class="side-menu__item__dot"></span>
       </a>
     </li>
-    <li>
+    <li class="side-menu__item">
       <a href="#next-meetup" class="page-scroll">
-        <span class="menu-title">Next meetup</span>
-        <span class="dot"></span>
+        <span class="side-menu__item__title">Next meetup</span>
+        <span class="side-menu__item__dot"></span>
       </a>
     </li>
-    <li>
+    <li class="side-menu__item">
       <a href="#about" class="page-scroll">
-        <span class="menu-title">About</span>
-        <span class="dot"></span>
+        <span class="side-menu__item__title">About</span>
+        <span class="side-menu__item__dot"></span>
       </a>
     </li>
-    <li>
+    <li class="side-menu__item">
       <a href="#speakers" class="page-scroll">
-        <span class="menu-title">Members</span>
-        <span class="dot"></span>
+        <span class="side-menu__item__title">Members</span>
+        <span class="side-menu__item__dot"></span>
       </a>
     </li>
-    <li>
-      <a href="#tickets" class="page-scroll">
-        <span class="menu-title">Join In</span>
-        <span class="dot"></span>
+    <li class="side-menu__item">
+      <a href="#join-in" class="page-scroll">
+        <span class="side-menu__item__title">Join In</span>
+        <span class="side-menu__item__dot"></span>
       </a>
     </li>
   </ul>
@@ -69,9 +66,9 @@
           <%= assetPath %>/img/woods.jpg
         ">
     <div class="col-md-7">
-      <img src="/img/wdots_circle_big.svg" class="logo">
-      <h1>Web Devs of the Shire</h1>
-      <h3>Join our monthly meetup for a drink, discussion and development.</h3>
+      <img src="/img/wdots_circle_big.svg" class="hero-header__logo">
+      <h1 class="hero-header__title">Web Devs of the Shire</h1>
+      <h3 class="hero-header__description">Join our monthly meetup for a drink, discussion and development.</h3>
     </div>
   </div>
   <!-- End: Header -->
@@ -127,20 +124,20 @@
   <!-- Start: Desc -->
   <section class="row section">
     <h2 class="section__title">Why Is This Meetup Super Cool?</h2>
-    <div class="col-md-4 feature reason">
-      <img src="/img/smile.svg" class="reason-img" alt="Smiley face icon">
+    <div class="col-md-4 reason">
+      <img src="/img/smile.svg" class="reason__img" role="img" aria-label="Smiley face icon">
       <h3>Great People</h3>
       <p>Our meetup spans across all branches of the Web with Developers, Designers and everything else 'techy'
         in-between.</p>
     </div>
-    <div class="col-md-4 feature reason">
-      <img src="/img/chat.svg" class="reason-img" alt="Speech bubble icon">
+    <div class="col-md-4 reason">
+      <img src="/img/chat.svg" class="reason__img" role="img" aria-label="Speech bubble icon">
       <h3>Range of Topics</h3>
       <p>With a vast range of sources to draw from, each month different discussions and our very own 'stand-up' takes
         place spanning languages, projects and learning.</p>
     </div>
-    <div class="col-md-4 feature reason">
-      <img src="/img/compass.svg" class="reason-img" class="Compass icon">
+    <div class="col-md-4 reason">
+      <img src="/img/compass.svg" class="reason__img" role="img" aria-label="Compass icon">
       <h3>Local to you</h3>
       <p>Meet the people attending this event from around Hertfordshire and Buckinghamshire. This will be a great
         opportunity to meet local people from your industry.</p>
@@ -149,137 +146,137 @@
   <!-- End: Desc -->
 
   <!-- Start: Speakers -->
-  <section class="row section speaker" id="speakers">
+  <section class="row section" id="speakers">
     <h2 class="section__title">Meet some Members</h2>
-    <div class="col-md-4 col-sm-6 feature">
-      <img src="<%= assetPath %>/img/simon-130.jpg" class="speaker-img" alt="Photograph of Simon Adcock">
+    <div class="speaker col-md-4 col-sm-6">
+      <img src="<%= assetPath %>/img/simon-130.jpg" class="speaker__img" alt="Photograph of Simon Adcock">
       <h3>Simon Adcock</h3>
       <p>Internet Wizard</p>
-      <ul class="speaker-social">
-        <li>
+      <ul class="social">
+        <li class="social__item">
           <a href="https://github.com/SiAdcock" target="_blank"><img
-            role="img" aria-label="Simon Adcock on github" src="/img/github.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Simon Adcock on github" src="/img/github.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://twitter.com/siadcock" target="_blank"><img
-            role="img" aria-label="Simon Adcock on Twitter" src="/img/twitter.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Simon Adcock on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://www.linkedin.com/in/sjadcock" target="_blank"><img
-            role="img" aria-label="Simon Adcock on LinkedIn" src="/img/linked_in.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Simon Adcock on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
     </div>
-    <div class="col-md-4 col-sm-6 feature">
-      <img src="<%= assetPath %>/img/matt-130.jpg" class="speaker-img" alt="Photograph of Matt Platts">
+    <div class="speaker col-md-4 col-sm-6">
+      <img src="<%= assetPath %>/img/matt-130.jpg" class="speaker__img" alt="Photograph of Matt Platts">
       <h3>Matt Platts</h3>
       <p>Pearl Diver</p>
-      <ul class="speaker-social">
-        <li>
+      <ul class="social">
+        <li class="social__item">
           <a href="https://github.com/matt-platts" target="_blank"><img
-            role="img" aria-label="Matt Platts on github" src="/img/github.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Matt Platts on github" src="/img/github.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://www.linkedin.com/in/mattplatts" target="_blank"><img
-            role="img" aria-label="Matt Platts on LinkedIn" src="/img/linked_in.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Matt Platts on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
     </div>
-    <div class="col-md-4 col-sm-6 feature">
-      <img src="<%= assetPath %>/img/jimmy-130.jpg" class="speaker-img" alt="Photograph of Jimmy Names">
+    <div class="speaker col-md-4 col-sm-6">
+      <img src="<%= assetPath %>/img/jimmy-130.jpg" class="speaker__img" alt="Photograph of Jimmy Names">
       <h3>Jimmy Names</h3>
       <p>Dev Padewan</p>
-      <ul class="speaker-social">
-        <li>
+      <ul class="social">
+        <li class="social__item">
           <a href="https://github.com/jimmynames" target="_blank"><img
-            role="img" aria-label="Jimmy Names on github" src="/img/github.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Jimmy Names on github" src="/img/github.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://twitter.com/namescodes" target="_blank"><img
-            role="img" aria-label="Jimmy Names on Twitter" src="/img/twitter.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Jimmy Names on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://www.linkedin.com/in/jimmynames" target="_blank"><img
-            role="img" aria-label="Jimmy Names on LinkedIn" src="/img/linked_in.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Jimmy Names on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
     </div>
-    <div class="col-md-4 col-sm-6 feature">
-      <img src="<%= assetPath %>/img/james-130.jpg" class="speaker-img" alt="Photograph of James Monger">
+    <div class="speaker col-md-4 col-sm-6">
+      <img src="<%= assetPath %>/img/james-130.jpg" class="speaker__img" alt="Photograph of James Monger">
       <h3>James Monger</h3>
       <p>JS Master</p>
-      <ul class="speaker-social">
-        <li>
+      <ul class="social">
+        <li class="social__item">
           <a href="https://github.com/Jameskmonger" target="_blank"><img
-            role="img" aria-label="James Monger on github" src="/img/github.svg" class="speaker-social-img"></a>
+            role="img" aria-label="James Monger on github" src="/img/github.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://twitter.com/jameskmonger" target="_blank"><img
-            role="img" aria-label="James Monger on Twitter" src="/img/twitter.svg" class="speaker-social-img"></a>
+            role="img" aria-label="James Monger on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
         </li>
-          <li>
+          <li class="social__item">
           <a href="https://www.linkedin.com/in/james-monger-20740b79" target="_blank"><img
-            role="img" aria-label="James Monger on LinkedIn" src="/img/linked_in.svg" class="speaker-social-img"></a>
+            role="img" aria-label="James Monger on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
     </div>
-    <div class="col-md-4 col-sm-6 feature">
-      <img src="<%= assetPath %>/img/steve-130.jpg" class="speaker-img" alt="Illustration of Steve Knight">
+    <div class="speaker col-md-4 col-sm-6">
+      <img src="<%= assetPath %>/img/steve-130.jpg" class="speaker__img" alt="Illustration of Steve Knight">
       <h3>Steve Knight</h3>
       <p>Sir JS</p>
-      <ul class="speaker-social">
-        <li>
+      <ul class="social">
+        <li class="social__item">
           <a href="#" target="_blank"><img
-            role="img" aria-label="Steve Knight on github" src="/img/github.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Steve Knight on github" src="/img/github.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="#" target="_blank"><img
-            role="img" aria-label="Steve Knight on LinkedIn" src="/img/linked_in.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Steve Knight on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
     </div>
-    <div class="col-md-4 col-sm-6 feature">
-      <img src="<%= assetPath %>/img/luke-130.jpg" class="speaker-img" alt="Photograph of Luke Lehane">
+    <div class="speaker col-md-4 col-sm-6">
+      <img src="<%= assetPath %>/img/luke-130.jpg" class="speaker__img" alt="Photograph of Luke Lehane">
       <h3>Luke Lehane</h3>
       <p>Pixel Perfectionist</p>
-      <ul class="speaker-social">
-        <li>
+      <ul class="social">
+        <li class="social__item">
           <a href="https://github.com/lehanism" target="_blank"><img
-            role="img" aria-label="Luke Lehane on github" src="/img/github.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Luke Lehane on github" src="/img/github.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://twitter.com/lehanism" target="_blank"><img
-            role="img" aria-label="Luke Lehane on Twitter" src="/img/twitter.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Luke Lehane on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://www.linkedin.com/in/lukelehane" target="_blank"><img
-            role="img" aria-label="Luke Lehane on LinkedIn" src="/img/linked_in.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Luke Lehane on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
     </div>
-    <div class="col-md-4 col-sm-6 feature">
-      <img src="<%= assetPath %>/img/bart-130.jpg" class="speaker-img" alt="Photograph of Bart Nowak">
+    <div class="speaker col-md-4 col-sm-6">
+      <img src="<%= assetPath %>/img/bart-130.jpg" class="speaker__img" alt="Photograph of Bart Nowak">
       <h3>Bart Nowak</h3>
       <p>Design Lord</p>
-      <ul class="speaker-social">
-        <li>
+      <ul class="social">
+        <li class="social__item">
           <a href="https://github.com/BartNowak" target="_blank"><img
-            role="img" aria-label="Bart Nowak on github" src="/img/github.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Bart Nowak on github" src="/img/github.svg" class="social__item__img"></a>
         </li>
-        <li>
+        <li class="social__item">
           <a href="https://www.linkedin.com/in/bart-nowak-205b3959" target="_blank"><img
-            role="img" aria-label="Bart Nowak on LinkedIn" src="/img/linked_in.svg" class="speaker-social-img"></a>
+            role="img" aria-label="Bart Nowak on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
     </div>
-    <div class="col-md-4 col-sm-6 feature">
-      <img src="<%= assetPath %>/img/james-r-130.jpg" class="speaker-img" alt="Photograph of James Richford">
+    <div class="speaker col-md-4 col-sm-6">
+      <img src="<%= assetPath %>/img/james-r-130.jpg" class="speaker__img" alt="Photograph of James Richford">
       <h3>James Richford</h3>
       <p>Shiny Grasshopper</p>
-      <ul class="speaker-social">
-        <li>
+      <ul class="social">
+        <li class="social__item">
           <a href="https://github.com/jamesrichford" target="_blank"><img
-            role="img" aria-label="James Richford on github" src="/img/github.svg" class="speaker-social-img"></a>
+            role="img" aria-label="James Richford on github" src="/img/github.svg" class="social__item__img"></a>
         </li>
       </ul>
     </div>
@@ -287,20 +284,20 @@
   <!-- End: Speakers -->
 </div>
 
-<!-- Start: Tickets -->
-<div class="container-fluid tickets" id="tickets">
+<!-- Start: Join In -->
+<div class="container-fluid join-in" id="join-in">
   <section class="row section">
-    <h2 class="section__title hello-title">Say Hello</h2>
-    <div class="col-md-4 col-sm-6 col-md-offset-2 hello-block">
-      <h3>Slack</h3>
+    <h2 class="section__title join-in__title">Say Hello</h2>
+    <div class="col-md-4 col-sm-6 col-md-offset-2 join-in__section">
+      <h3 class="join-in__section__title">Slack</h3>
       <!-- ADD BUTTON -->
-      <a href="https://wdots-slack.herokuapp.com" class="btn btn-lg btn-success socialButton">Join Slack Chat<span
+      <a href="https://wdots-slack.herokuapp.com" class="btn btn-lg btn-success join-in__section__button">Join Slack Chat<span
         class="ti-arrow-right"></span></a>
-      <p>Get to know the group online or find out more about the Meetup via <a href="https://slack.com/">Slack</a></p>
+      <p class="join-in__section__description">Get to know the group online or find out more about the Meetup via <a href="https://slack.com/">Slack</a></p>
     </div>
-    <div class="col-md-4 col-sm-6 hello-block">
-      <h3>Meetup</h3>
-      <span class="addtocalendar atc-style-green socialButton">
+    <div class="col-md-4 col-sm-6 join-in__section">
+      <h3 class="join-in__section__title">Meetup</h3>
+      <span class="addtocalendar atc-style-green join-in__section__button">
           <var class="atc_event">
               <var class="atc_date_start">2016-09-22 18:45:00</var>
               <var class="atc_date_end">2016-09-22 21:00:00</var>
@@ -311,22 +308,21 @@
               <var class="atc_organizer">WDOTS</var>
           </var>
         </span>
-      <p>Add our next event to your calender to make sure you get a friendly reminder and join in!</p>
+      <p class="join-in__section__description">Add our next event to your calendar to make sure you get a friendly reminder and join in!</p>
     </div>
   </section>
 </div>
-<!-- End: Tickets -->
+<!-- End: Join In -->
 
 
 <!-- Start: Footer -->
-<div class="container-fluid footer">
-
-  <div class="row footer-credit">
+<div class="footer container-fluid">
+  <div class="row">
     <div class="col-md-6 col-sm-6">
-      <img src="/img/wdots_rectangle_big.svg" class="banner-logo" alt="banner logo"/>
+      <img src="/img/wdots_rectangle_big.svg" class="footer__logo" alt="banner logo"/>
     </div>
-    <div class="col-md-6 col-sm-6 scrollToTop footer-arrow">
-      <img src="/img/up-arrow.svg" class="footer-arrow-img">
+    <div class="col-md-6 col-sm-6 footer__arrow">
+      <img src="/img/up-arrow.svg" class="footer__arrow__img js-footer-arrow">
     </div>
   </div>
 </div>
