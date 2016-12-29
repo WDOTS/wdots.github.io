@@ -1,5 +1,5 @@
 const shell = require('shelljs');
-const isDev = require('./isDev');
+const isDev = require('./helpers/isDev');
 
 module.exports = function fonts() {
     if (isDev()) {

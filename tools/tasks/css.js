@@ -4,8 +4,8 @@ const cleanCss = require('gulp-clean-css');
 const sass = require('gulp-sass');
 const preprocess = require('gulp-preprocess');
 const sourcemaps = require('gulp-sourcemaps');
-const browserSync = require('./browserSync');
-const isDev = require('./isDev');
+const browserSync = require('./helpers/browserSync');
+const isDev = require('./helpers/isDev');
 
 module.exports = function css() {
     if (isDev()) {

@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
-const browserSync = require('./browserSync');
-const isDev = require('./isDev');
+const browserSync = require('./helpers/browserSync');
+const isDev = require('./helpers/isDev');
 
 module.exports = function js() {
     if (isDev()) {

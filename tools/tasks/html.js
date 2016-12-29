@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const template = require('gulp-template');
 const htmlmin = require('gulp-htmlmin');
 const inline = require('gulp-inline');
-const browserSync = require('./browserSync');
-const isDev = require('./isDev');
+const browserSync = require('./helpers/browserSync');
+const isDev = require('./helpers/isDev');
 
 module.exports = function html() {
     const data = {

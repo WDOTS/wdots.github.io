@@ -1,6 +1,6 @@
 const gulp = require('gulp');
-const isDev = require('./isDev');
-const browserSync = require('./browserSync');
+const isDev = require('./helpers/isDev');
+const browserSync = require('./helpers/browserSync');
 
 module.exports = function serve() {
     browserSync.init({
