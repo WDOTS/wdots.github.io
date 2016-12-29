@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const template = require('gulp-template');
 const htmlmin = require('gulp-htmlmin');
+const inline = require('gulp-inline');
 const browserSync = require('browser-sync').create();
 
 const isDev = function () {
@@ -89,6 +90,10 @@ gulp.task('build:html', () => {
     }
     gulp.src('src/templates/index.html')
         .pipe(template(data))
+        .pipe(inline({
+            base: 'src/',
+            disabledTypes: ['css', 'img', 'js'], // Only inline svg files
+        }))
         .pipe(htmlmin({
             collapseWhitespace: true,
             conservativeCollapse: true
