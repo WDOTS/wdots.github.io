@@ -1,16 +1,16 @@
-.atc-style-blue {
+.atc-style-green {
     .atcb-list {
         width: 100%;
+        background: #ffffff;
+        border: 1px solid #bababa;
+        border-radius: 2px;
+        box-shadow: 0 0 5px #aaaaaa;
     }
 
-    .atcb-link,
-    .atcb-link:hover,
-    .atcb-link:active,
-    .atcb-link:focus {
+    .atcb-link {
+        color: #ffffff;
         border-radius: 4px;
-        font-family: 'Dosis', sans-serif;
         padding: 15px 40px;
-        font-size: 16px;
         background-color: #5cb85c;
         border-color: #4cae4c;
         text-transform: uppercase;
@@ -22,26 +22,31 @@
         touch-action: manipulation;
         cursor: pointer;
         -webkit-user-select: none;
+
+        &.atcb-link:hover,
+        &.atcb-link:active,
+        &.atcb-link:focus {
+            background-color: #449d44;
+            border-color: #398439;
+        }
     }
 
-    .atcb-link:hover,
-    .atcb-link:active,
-    .atcb-link:focus{
-        background-color: #449d44;
-        border-color: #398439;
-    }
-
-    .atcb-item,
-    .atcb-item-link,
-    .atcb-item-link:hover {
-        font-family: 'Dosis', sans-serif;
-    }
-
-    .atcb-item:hover {
-        background: #5cb85c;
+    .atcb-item {
+        &:hover {
+            background: #5cb85c;
+        }
     }
 
     .atcb-item-link {
+        font-size: .875em;
+        color: #000000;
+        text-decoration: none;
+        outline: none;
+        padding: 5px 15px;
         transition: none;
+
+        &:hover {
+            color: #ffffff;
+        }
     }
 }
