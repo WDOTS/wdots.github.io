@@ -6,7 +6,7 @@ function fadeIntoBeing(selection, animation, callback) {
 }
 
 $(document).ready(function () {
-    var $arrow = $('.footer-arrow-img');
+    var $arrow = $('.js-footer-arrow');
     var $reasons = $('.reason');
     var fade = {
         opacity: 0.7,

@@ -2,26 +2,20 @@
     border-top: 1px #545454 solid;
     background-color: #2a2a2a;
     color: #939393;
-
-    p {
-        margin-bottom: 0;
-    }
-}
-.footer-credit {
     padding: 20px 20px 0 20px;
 }
 
-.banner-logo {
+.footer__logo {
     width: 40%;
     height: auto;
 }
 
-.footer-arrow {
+.footer__arrow {
     height: 3em;
     text-align: right;
 }
 
-.footer-arrow-img {
+.footer__arrow__img {
     height: 32px;
     width: 48px;
     opacity: 0;
