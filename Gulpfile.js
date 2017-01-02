@@ -9,10 +9,9 @@ const images = require('./tools/tasks/images');
 
 gulp.task('default', ['serve']);
 gulp.task('serve', ['build'], serve);
-gulp.task('build', ['clean', 'build:html', 'build:js', 'build:css', 'build:fonts', 'build:images']);
+gulp.task('build', ['clean', 'build:js', 'build:css', 'build:fonts', 'build:images'], html);
 gulp.task('clean', clean);
 gulp.task('build:js', js);
 gulp.task('build:css', css);
-gulp.task('build:html', html);
 gulp.task('build:fonts', fonts);
 gulp.task('build:images', images);
