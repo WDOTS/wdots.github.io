@@ -7,7 +7,8 @@ const isDev = require('./helpers/isDev');
 
 module.exports = function html() {
     const data = {
-        assetPath: 'build'
+        assetPath: 'build',
+        cssPath: isDev() ? 'build' : ''
     };
 
     if (isDev()) {
@@ -36,8 +37,8 @@ module.exports = function html() {
     gulp.src('src/templates/index.html')
         .pipe(template(data))
         .pipe(inline({
-            base: 'src/',
-            disabledTypes: ['css', 'img', 'js'], // Only inline svg files
+            base: 'build/',
+            disabledTypes: ['img', 'js', isDev() ? 'css' : ''],
         }))
         .pipe(htmlmin({
             collapseWhitespace: true,
