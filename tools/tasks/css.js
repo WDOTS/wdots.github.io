@@ -13,12 +13,14 @@ module.exports = function css(cb) {
             .pipe(gulp.dest('build/css/vendor'));
     }
     gulp.src('src/css/style.scss')
+        .pipe(preprocess())
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(preprocess())
         .pipe(cleanCss())
         .pipe(concat('style.css'))
-        .pipe(sourcemaps.write('maps/'))
+        .pipe(sourcemaps.write('maps/', {
+            sourceMappingURLPrefix: isDev() ? '' : '/build/css'
+        }))
         .pipe(browserSync.stream())
         .pipe(gulp.dest('build/css/'))
         .on('end', cb);
