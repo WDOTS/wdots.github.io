@@ -10,7 +10,7 @@
 
   <link href="<%= vendorPaths.bootstrap %>" rel="stylesheet"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href="<%= assetPath %>/css/style.css" rel="stylesheet">
+  <link href="<%= cssPath %>/css/style.css" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="<%= vendorPaths.html5Shiv %>"></script>
   <script src="<%= vendorPaths.respond %>"></script>
@@ -329,20 +329,18 @@
 <!-- End: Footer -->
 
 <script src="<%= vendorPaths.jquery %>" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-        crossorigin="anonymous"></script>
-<script src="<%= vendorPaths.jqueryEasing %>"></script>
-<script src="<%= vendorPaths.jqueryVisible %>"></script>
-<script src="<%= vendorPaths.addToCalendarJs %>"></script>
-<script src="<%= assetPath %>/js/main.js"></script>
+        crossorigin="anonymous" defer></script>
+<script src="<%= vendorPaths.jqueryEasing %>" defer></script>
+<script src="<%= vendorPaths.jqueryVisible %>" defer></script>
+<script src="<%= vendorPaths.addToCalendarJs %>" defer></script>
+<script src="<%= assetPath %>/js/main.js" defer></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-89710540-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </body>
 </html>
