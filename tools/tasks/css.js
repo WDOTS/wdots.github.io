@@ -7,18 +7,21 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('./helpers/browserSync');
 const isDev = require('./helpers/isDev');
 
-module.exports = function css() {
+module.exports = function css(cb) {
     if (isDev()) {
         gulp.src(['src/css/vendor/*.css', 'src/css/vendor/*.map'])
             .pipe(gulp.dest('build/css/vendor'));
     }
     gulp.src('src/css/style.scss')
+        .pipe(preprocess())
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(preprocess())
         .pipe(cleanCss())
         .pipe(concat('style.css'))
-        .pipe(sourcemaps.write('maps/'))
+        .pipe(sourcemaps.write('maps/', {
+            sourceMappingURLPrefix: isDev() ? '' : '/build/css'
+        }))
         .pipe(browserSync.stream())
-        .pipe(gulp.dest('build/css/'));
+        .pipe(gulp.dest('build/css/'))
+        .on('end', cb);
 };

@@ -7,7 +7,8 @@ const isDev = require('./helpers/isDev');
 
 module.exports = function html() {
     const data = {
-        assetPath: 'build'
+        assetPath: 'build',
+        cssPath: isDev() ? 'build' : ''
     };
 
     if (isDev()) {
@@ -27,7 +28,7 @@ module.exports = function html() {
             jqueryEasing: '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
             jqueryVisible: '//cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js',
             bootstrap: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-            addToCalendarCss: '///addtocalendar.com/atc/1.5/atc-base.css',
+            addToCalendarCss: '//addtocalendar.com/atc/1.5/atc-base.css',
             html5Shiv: '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
             respond: '//oss.maxcdn.com/respond/1.4.2/respond.min.js',
             addToCalendarJs: '//addtocalendar.com/atc/1.5/atc.min.js'
@@ -36,8 +37,8 @@ module.exports = function html() {
     gulp.src('src/templates/index.html')
         .pipe(template(data))
         .pipe(inline({
-            base: 'src/',
-            disabledTypes: ['css', 'img', 'js'], // Only inline svg files
+            base: 'build/',
+            disabledTypes: ['img', 'js', isDev() ? 'css' : ''],
         }))
         .pipe(htmlmin({
             collapseWhitespace: true,
