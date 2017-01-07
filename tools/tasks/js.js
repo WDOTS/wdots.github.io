@@ -5,17 +5,16 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('./helpers/browserSync');
 const isDev = require('./helpers/isDev');
 
-module.exports = function js(cb) {
+module.exports = function js() {
     if (isDev()) {
         gulp.src('src/js/vendor/*.js')
             .pipe(gulp.dest('build/js/vendor'));
     }
-    gulp.src('src/js/*.js')
+    return gulp.src('src/js/*.js')
         .pipe(sourcemaps.init())
         .pipe(uglify({ mangle: false }))
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('maps/'))
         .pipe(browserSync.stream())
-        .pipe(gulp.dest('build/js/'))
-        .on('end', cb);
+        .pipe(gulp.dest('build/js/'));
 };
