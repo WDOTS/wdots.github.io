@@ -1,6 +1,6 @@
 const { log } = require('gulp-util');
 const swPrecache = require('sw-precache');
-const { name } = require('../../package.json');
+const { name } = require('../../../package.json');
 
 module.exports = function writeServiceWorkerFile(handleFetch, callback) {
     const config = {
