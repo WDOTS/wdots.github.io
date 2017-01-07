@@ -5,7 +5,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('./helpers/browserSync');
 const isDev = require('./helpers/isDev');
 
-module.exports = function js() {
+module.exports = function js(cb) {
     if (isDev()) {
         gulp.src('src/js/vendor/*.js')
             .pipe(gulp.dest('build/js/vendor'));
@@ -16,5 +16,6 @@ module.exports = function js() {
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('maps/'))
         .pipe(browserSync.stream())
-        .pipe(gulp.dest('build/js/'));
+        .pipe(gulp.dest('build/js/'))
+        .on('end', cb);
 };
