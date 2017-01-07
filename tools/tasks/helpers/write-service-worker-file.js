@@ -11,7 +11,6 @@ module.exports = function writeServiceWorkerFile(handleFetch, callback) {
             'build/img/**.*',
             'build/js/**.js'
         ],
-        verbose: true
     };
 
     swPrecache.write('service-worker.js', config, callback);
