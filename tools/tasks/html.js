@@ -32,7 +32,8 @@ module.exports = function html() {
             addToCalendarJs: '//addtocalendar.com/atc/1.5/atc.min.js'
         };
     }
-    gulp.src('src/templates/index.html')
+
+    return gulp.src('src/templates/index.html')
         .pipe(template(data))
         .pipe(inline({
             base: 'build/',
