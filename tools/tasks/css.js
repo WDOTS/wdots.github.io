@@ -12,7 +12,8 @@ module.exports = function css() {
         gulp.src(['src/css/vendor/*.css', 'src/css/vendor/*.map'])
             .pipe(gulp.dest('build/css/vendor'));
     }
-    gulp.src('src/css/style.scss')
+
+    return gulp.src('src/css/style.scss')
         .pipe(preprocess())
         .pipe(sourcemaps.init())
         .pipe(sass())

@@ -10,7 +10,8 @@ module.exports = function js() {
         gulp.src('src/js/vendor/*.js')
             .pipe(gulp.dest('build/js/vendor'));
     }
-    gulp.src('src/js/*.js')
+
+    return gulp.src('src/js/*.js')
         .pipe(sourcemaps.init())
         .pipe(uglify({ mangle: false }))
         .pipe(concat('main.js'))
