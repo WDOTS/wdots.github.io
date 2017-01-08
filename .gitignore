@@ -40,3 +40,4 @@ jspm_packages
 
 build
 /index.html
+service-worker.js

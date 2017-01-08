@@ -7,7 +7,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('./helpers/browserSync');
 const isDev = require('./helpers/isDev');
 
-module.exports = function css(cb) {
+module.exports = function css() {
     if (isDev()) {
         gulp.src(['src/css/vendor/*.css', 'src/css/vendor/*.map'])
             .pipe(gulp.dest('build/css/vendor'));
@@ -22,6 +22,5 @@ module.exports = function css(cb) {
             sourceMappingURLPrefix: isDev() ? '' : '/build/css'
         }))
         .pipe(browserSync.stream())
-        .pipe(gulp.dest('build/css/'))
-        .on('end', cb);
+        .pipe(gulp.dest('build/css/'));
 };
