@@ -24,9 +24,6 @@
         padding: 3em 1em 1em 1em;
         text-align: center;
     }
-    .speaker {
-        width: 100%
-    }
     .footer {
         text-align: center;
         padding: 40px 20px;
@@ -43,19 +40,6 @@
     .hero-header {
         padding: 3em 1em 1em 1em;
         text-align: center;
-    }
-    .speaker {
-        width: 49%;
-        margin-right: 7px;
-    }
-}
-
-/* iPad Landscape */
-
-@media (min-width: $width-ipad-landscape-min) and (max-width: $width-ipad-landscape-max) {
-    .speaker {
-        width: 49%;
-        margin-right: 9px;
     }
 }
 
