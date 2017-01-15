@@ -5,6 +5,13 @@
     margin-top: 30px;
 }
 
+@media (min-width: 768px) {
+    .reason {
+        width: 33.33333333%;
+        display: inline-block;
+    }
+}
+
 .reason__img {
     max-width: 64px;
     max-height: 54px;
