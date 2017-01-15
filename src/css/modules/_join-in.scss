@@ -9,7 +9,22 @@
 }
 
 .join-in__section {
+    display: inline-block;
+    width: 100%;
     padding: 2em;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .join-in__section {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .join-in__section {
+        width: 33.33333333%;
+    }
 }
 
 .join-in__section__title,
