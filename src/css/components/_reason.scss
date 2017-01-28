@@ -3,9 +3,10 @@
     position: relative;
     padding: 20px;
     margin-top: 30px;
+    vertical-align: top;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $width-ipad-landscape-min) {
     .reason {
         width: 33.33333333%;
         display: inline-block;
