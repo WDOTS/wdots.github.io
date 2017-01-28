@@ -20,7 +20,7 @@ module.exports = function html() {
             html5Shiv: 'build/js/vendor/html5shiv.min.js',
             respond: 'build/js/vendor/respond.min.js',
             addToCalendarJs: 'build/js/vendor/atc.min.js',
-            normalize: 'build/js/vendor/normalize.css'
+            normalize: 'build/css/vendor/normalize.css'
         };
     } else {
         data.vendorPaths = {
