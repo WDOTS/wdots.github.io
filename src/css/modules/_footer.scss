@@ -7,7 +7,14 @@
 
 .footer__logo, .footer__arrow {
     display: inline-block;
-    width: 50%;
+    width: 100%;
+}
+
+@media (min-width: $width-ipad-min) {
+    .footer__logo, .footer__arrow {
+        display: inline-block;
+        width: 50%;
+    }
 }
 
 .footer__arrow {
