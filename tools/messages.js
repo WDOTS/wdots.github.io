@@ -4,10 +4,10 @@ function notify(message, type) {
         require('megalog')[type](message);
     } catch (e) {
         // eslint-disable-next-line no-console
-        console.log('\n\nPlease run npm install');
+        console.log('\n\nPlease run yarn install');
     }
 }
 
 if (process.argv[2] === 'dependencies-changed') {
-    notify('Dependencies have changed. Run `npm install`', 'warn');
+    notify('Dependencies have changed. Run `yarn install`', 'warn');
 }

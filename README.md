@@ -8,6 +8,11 @@
 
 Contributions to the website are very welcome!
 
+You will need:
+
+- [NodeJS](https://nodejs.org) (recommend v6.9 or above)
+- [Yarn](https://yarnpkg.com/)
+
 Clone the repo:
 
 ```
@@ -23,7 +28,7 @@ $ git checkout -b my-new-feature
 Install dependencies:
 
 ```
-$ npm install
+$ yarn install
 ```
 
 Start the dev server:
@@ -56,6 +61,8 @@ Then go to [our Github repo](https://github.com/WDOTS/wdots.github.io) and creat
 
 ## Guidelines
 
+- Use [Yarn](https://yarnpkg.com/) to add or remove any dependencies, and remember to check in changes to the 
+ `yarn.lock` file
 - Before committing, please run `npm run lint` and ensure there are no linting errors or warnings
 - Before raising a pull request please test that the website works in the latest version
  of all major browsers (Chrome, Firefox, Safari, Edge)
