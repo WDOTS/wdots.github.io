@@ -5,14 +5,26 @@
     padding: 20px 20px 0 20px;
 }
 
-.footer__logo {
-    width: 40%;
-    height: auto;
+.footer__logo, .footer__arrow {
+    display: inline-block;
+    width: 100%;
+}
+
+@media (min-width: $width-ipad-min) {
+    .footer__logo, .footer__arrow {
+        display: inline-block;
+        width: 50%;
+    }
 }
 
 .footer__arrow {
     height: 3em;
     text-align: right;
+}
+
+.footer__logo__img {
+    width: 40%;
+    height: auto;
 }
 
 .footer__arrow__img {

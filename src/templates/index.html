@@ -14,8 +14,7 @@
     }
   </script>
   <link href="<%= assetPath %>/img/favicon.ico" rel="shortcut icon">
-  <link href="<%= vendorPaths.bootstrap %>" rel="stylesheet"
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="<%= vendorPaths.normalize %>" rel="stylesheet">
   <link href="<%= cssPath %>/css/style.css" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="<%= vendorPaths.html5Shiv %>"></script>
@@ -59,7 +58,7 @@
 </nav>
 <div class="container-fluid">
   <!-- Start: Header -->
-  <div class="row hero-header" id="home">
+  <div class="hero-header" id="home">
     <img src="<%= assetPath %>/img/woods.jpg"
          class="hero-header__background"
          role="presentation" alt=""
@@ -71,7 +70,7 @@
           <%= assetPath %>/img/woods-1280.jpg 1280w,
           <%= assetPath %>/img/woods.jpg
         ">
-    <div class="col-md-7">
+    <div class="hero-header__content">
       <img src="/img/wdots_circle_big.svg" class="hero-header__logo">
       <h1 class="hero-header__title">Web Devs of the Shire</h1>
       <h3 class="hero-header__description">Join our monthly meetup for a drink, discussion and development.</h3>
@@ -81,7 +80,7 @@
 </div>
 <div class="container">
   <!-- Start: Next Meetup -->
-  <section class="row section next-meetup" id="next-meetup">
+  <section class="section next-meetup" id="next-meetup">
     <div class="next-meetup__banner">
       <h2 class="next-meetup__banner__heading">Next Meetup</h2>
     </div>
@@ -110,38 +109,34 @@
   </section>
   <!-- End: About -->
   <!-- Start: About -->
-  <section class="row section" id="about">
+  <section class="section about" id="about">
     <h2 class="section__title">About Us</h2>
-    <div class="col-md-offset-2 col-lg-8 col-md-8 col-sm-10 ">
-      <h4>Far beyond the misty mountains, in a quiet corner of the South East, there is a land of silicon and
-        startups... The Thames Valley is home to a huge and growing community of web developers and tech startups.</h4>
+    <h4>Far beyond the misty mountains, in a quiet corner of the South East, there is a land of silicon and
+      startups... The Thames Valley is home to a huge and growing community of web developers and tech startups.</h4>
 
-      <p>WDOTS is here to bring together innovative developers, heroic testers and pioneering founders on a quest to
-        make the world a better place.</p>
+    <p>WDOTS is here to bring together innovative developers, heroic testers and pioneering founders on a quest to
+      make the world a better place.</p>
 
-      <p>We host monthly events ranging from lightning talks and presentations to hacks and project inceptions.</p>
+    <p>We host monthly events ranging from lightning talks and presentations to hacks and project inceptions.</p>
 
-      <p>So join us for an evening of discussion, code and the occasional moment of brilliance over a mead and a bit of
-        pipe weed once every month in and around Gerrards Cross, Buckinghamshire.</p>
-    </div>
+    <p>So join us for an evening of discussion, code and the occasional moment of brilliance over a mead and a bit of
+      pipe weed once every month in and around Gerrards Cross, Buckinghamshire.</p>
   </section>
   <!-- End: About -->
   <!-- Start: Desc -->
-  <section class="row section">
+  <section class="section">
     <h2 class="section__title">Why Is This Meetup Super Cool?</h2>
-    <div class="col-md-4 reason">
+    <div class="reason">
       <img src="/img/smile.svg" class="reason__img" role="img" aria-label="Smiley face icon">
       <h3>Great People</h3>
       <p>Our meetup spans across all branches of the Web with Developers, Designers and everything else 'techy'
         in-between.</p>
-    </div>
-    <div class="col-md-4 reason">
+    </div><div class="reason">
       <img src="/img/chat.svg" class="reason__img" role="img" aria-label="Speech bubble icon">
       <h3>Range of Topics</h3>
       <p>With a vast range of sources to draw from, each month different discussions and our very own 'stand-up' takes
         place spanning languages, projects and learning.</p>
-    </div>
-    <div class="col-md-4 reason">
+    </div><div class="reason">
       <img src="/img/compass.svg" class="reason__img" role="img" aria-label="Compass icon">
       <h3>Local to you</h3>
       <p>Meet the people attending this event from around Hertfordshire and Buckinghamshire. This will be a great
@@ -151,9 +146,9 @@
   <!-- End: Desc -->
 
   <!-- Start: Speakers -->
-  <section class="row section" id="speakers">
+  <section class="section" id="speakers">
     <h2 class="section__title">Meet some Members</h2>
-    <div class="speaker col-md-4 col-sm-6">
+    <div class="speaker">
       <img src="<%= assetPath %>/img/simon-130.jpg" class="speaker__img" alt="Photograph of Simon Adcock">
       <h3>Simon Adcock</h3>
       <p>Internet Wizard</p>
@@ -171,8 +166,7 @@
             role="img" aria-label="Simon Adcock on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
-    </div>
-    <div class="speaker col-md-4 col-sm-6">
+    </div><div class="speaker">
       <img src="<%= assetPath %>/img/matt-130.jpg" class="speaker__img" alt="Photograph of Matt Platts">
       <h3>Matt Platts</h3>
       <p>Pearl Diver</p>
@@ -186,8 +180,7 @@
             role="img" aria-label="Matt Platts on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
-    </div>
-    <div class="speaker col-md-4 col-sm-6">
+    </div><div class="speaker">
       <img src="<%= assetPath %>/img/jimmy-130.jpg" class="speaker__img" alt="Photograph of Jimmy Names">
       <h3>Jimmy Names</h3>
       <p>Dev Padewan</p>
@@ -205,8 +198,7 @@
             role="img" aria-label="Jimmy Names on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
-    </div>
-    <div class="speaker col-md-4 col-sm-6">
+    </div><div class="speaker">
       <img src="<%= assetPath %>/img/james-130.jpg" class="speaker__img" alt="Photograph of James Monger">
       <h3>James Monger</h3>
       <p>JS Master</p>
@@ -224,8 +216,7 @@
             role="img" aria-label="James Monger on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
-    </div>
-    <div class="speaker col-md-4 col-sm-6">
+    </div><div class="speaker">
       <img src="<%= assetPath %>/img/steve-130.jpg" class="speaker__img" alt="Illustration of Steve Knight">
       <h3>Steve Knight</h3>
       <p>Sir JS</p>
@@ -239,8 +230,7 @@
             role="img" aria-label="Steve Knight on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
-    </div>
-    <div class="speaker col-md-4 col-sm-6">
+    </div><div class="speaker">
       <img src="<%= assetPath %>/img/luke-130.jpg" class="speaker__img" alt="Photograph of Luke Lehane">
       <h3>Luke Lehane</h3>
       <p>Pixel Perfectionist</p>
@@ -258,8 +248,7 @@
             role="img" aria-label="Luke Lehane on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
-    </div>
-    <div class="speaker col-md-4 col-sm-6">
+    </div><div class="speaker">
       <img src="<%= assetPath %>/img/bart-130.jpg" class="speaker__img" alt="Photograph of Bart Nowak">
       <h3>Bart Nowak</h3>
       <p>Design Lord</p>
@@ -273,8 +262,7 @@
             role="img" aria-label="Bart Nowak on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
         </li>
       </ul>
-    </div>
-    <div class="speaker col-md-4 col-sm-6">
+    </div><div class="speaker">
       <img src="<%= assetPath %>/img/james-r-130.jpg" class="speaker__img" alt="Photograph of James Richford">
       <h3>James Richford</h3>
       <p>Shiny Grasshopper</p>
@@ -291,16 +279,15 @@
 
 <!-- Start: Join In -->
 <div class="container-fluid join-in" id="join-in">
-  <section class="row section">
+  <section class="section">
     <h2 class="section__title join-in__title">Say Hello</h2>
-    <div class="col-md-4 col-sm-6 col-md-offset-2 join-in__section">
+    <div class="join-in__section">
       <h3 class="join-in__section__title">Slack</h3>
       <!-- ADD BUTTON -->
       <a href="https://wdots-slack.herokuapp.com" class="btn btn-lg btn-success join-in__section__button">Join Slack Chat<span
         class="ti-arrow-right"></span></a>
       <p class="join-in__section__description">Get to know the group online or find out more about the Meetup via <a href="https://slack.com/">Slack</a></p>
-    </div>
-    <div class="col-md-4 col-sm-6 join-in__section">
+    </div><div class="join-in__section">
       <h3 class="join-in__section__title">Meetup</h3>
       <span class="addtocalendar atc-style-green join-in__section__button">
           <var class="atc_event">
@@ -322,13 +309,10 @@
 
 <!-- Start: Footer -->
 <div class="footer container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-sm-6">
-      <img src="/img/wdots_rectangle_big.svg" class="footer__logo" alt="banner logo"/>
-    </div>
-    <div class="col-md-6 col-sm-6 footer__arrow">
-      <img src="/img/up-arrow.svg" class="footer__arrow__img js-footer-arrow">
-    </div>
+  <div class="footer__logo">
+    <img src="/img/wdots_rectangle_big.svg" class="footer__logo__img" alt="banner logo"/>
+  </div><div class="footer__arrow">
+    <img src="/img/up-arrow.svg" class="footer__arrow__img js-footer-arrow">
   </div>
 </div>
 <!-- End: Footer -->

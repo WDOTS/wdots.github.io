@@ -1,5 +1,6 @@
 .speaker {
-    width: 31.333333%;
+    display: inline-block;
+    width: 100%;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -12,6 +13,28 @@
     &:hover {
         box-shadow: 3px 3px 10px #ccc;
         transform: translateY(-10px);
+    }
+}
+
+/* iPad Portrait */
+@media (min-width: $width-ipad-min) and (max-width: $width-ipad-max) {
+    .speaker {
+        margin-right: 7px;
+        width: 49%;
+    }
+}
+
+/* iPad landscape */
+@media (min-width: $width-ipad-landscape-min) and (max-width: $width-ipad-landscape-max) {
+    .speaker {
+        width: 49%;
+        margin-right: 9px;
+    }
+}
+
+@media (min-width: $width-desktop-min) {
+    .speaker {
+        width: 31.33333333%;
     }
 }
 

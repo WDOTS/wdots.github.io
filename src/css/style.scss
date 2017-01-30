@@ -4,11 +4,13 @@
 @import 'vendor/atc-base';
 @import 'components/add-to-calendar';
 @import 'components/button';
+@import 'components/container';
 @import 'components/icon';
 @import 'components/reason';
 @import 'components/section';
 @import 'components/side-menu';
 @import 'components/social';
+@import 'modules/about';
 @import 'modules/hero-header';
 @import 'modules/next-meetup';
 @import 'modules/speakers';
@@ -21,9 +23,6 @@
     .hero-header {
         padding: 3em 1em 1em 1em;
         text-align: center;
-    }
-    .speaker {
-        width: 100%
     }
     .footer {
         text-align: center;
@@ -41,19 +40,6 @@
     .hero-header {
         padding: 3em 1em 1em 1em;
         text-align: center;
-    }
-    .speaker {
-        width: 49%;
-        margin-right: 7px;
-    }
-}
-
-/* iPad Landscape */
-
-@media (min-width: $width-ipad-landscape-min) and (max-width: $width-ipad-landscape-max) {
-    .speaker {
-        width: 49%;
-        margin-right: 9px;
     }
 }
 
