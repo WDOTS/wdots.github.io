@@ -1,4 +1,4 @@
-.btn {
+.button {
     text-transform: uppercase;
     font-weight: 600;
     display: inline-block;
@@ -20,12 +20,12 @@
     border: 1px solid transparent;
     border-radius: 4px;
 }
-.btn-lg {
+.button--lg {
     padding: 15px 40px;
     font-size: 16px;
 }
 
-.btn-success {
+.button--success {
     color: #ffffff;
     background-color: #5cb85c;
     border-color: #4cae4c;
