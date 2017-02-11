@@ -26,7 +26,5 @@
 }
 
 .button--success {
-    color: #ffffff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
+    @include button-context($button-success-background, $button-success-text, $button-success-border);
 }

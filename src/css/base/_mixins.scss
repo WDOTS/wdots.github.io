@@ -1,0 +1,5 @@
+@mixin button-context($background, $text, $border) {
+    background-color: $background;
+    color: $text;
+    border-color: $border;
+}
