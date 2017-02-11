@@ -1,0 +1,9 @@
+@mixin button-context($background, $text, $border) {
+    background-color: $background;
+    color: $text;
+    border-color: $border;
+    &:hover, &:active, &:focus {
+        background-color: darken($background, 10%);
+        border-color: darken($border, 10%);
+    }
+}

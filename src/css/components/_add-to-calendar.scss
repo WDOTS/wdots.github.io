@@ -8,11 +8,8 @@
     }
 
     .atcb-link {
-        color: #ffffff;
         border-radius: 4px;
         padding: 15px 40px;
-        background-color: #5cb85c;
-        border-color: #4cae4c;
         text-transform: uppercase;
         font-weight: 600;
         line-height: 1.3333333;
@@ -22,13 +19,9 @@
         touch-action: manipulation;
         cursor: pointer;
         -webkit-user-select: none;
+        border: 1px solid transparent;
 
-        &.atcb-link:hover,
-        &.atcb-link:active,
-        &.atcb-link:focus {
-            background-color: #449d44;
-            border-color: #398439;
-        }
+        @include button-context($button-success-background, $button-success-text, $button-success-border);
     }
 
     .atcb-item {
