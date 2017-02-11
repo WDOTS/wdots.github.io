@@ -19,7 +19,6 @@ module.exports = function html() {
             html5Shiv: 'build/js/vendor/html5shiv.min.js',
             respond: 'build/js/vendor/respond.min.js',
             addToCalendarJs: 'build/js/vendor/atc.min.js',
-            normalize: 'build/css/vendor/normalize.css'
         };
     } else {
         data.vendorPaths = {
@@ -29,7 +28,6 @@ module.exports = function html() {
             html5Shiv: '//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js',
             respond: '//unpkg.com/respond.js@1.4.2/dest/respond.min.js',
             addToCalendarJs: '//addtocalendar.com/atc/1.5/atc.min.js',
-            normalize: '//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'
         };
     }
 
