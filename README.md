@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/WDOTS/wdots.github.io.svg)](https://travis-ci.org/WDOTS/wdots.github.io)
 
-[http://wdots.github.io/](http://wdots.github.io/)
+[https://wdots.github.io/](https://wdots.github.io/)
 
 ## Contribute
 
