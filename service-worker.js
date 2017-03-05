@@ -38,7 +38,7 @@
 'use strict';
 
 var precacheConfig = [["build/img/bart-130.jpg","d8448b51b207cacfc2bfad3e40456c46"],["build/img/chat.svg","af46dc4e6be4320558fbaa8a99289901"],["build/img/compass.svg","af2b90211c1992696b290639484bc29f"],["build/img/favicon.ico","553b973cb3f5e9088dda8566023e75d8"],["build/img/github.svg","7db3e4eba89fbdcfd1ec3533e03f25a6"],["build/img/james-130.jpg","b7240cc12f124c2b89026e6248052cd3"],["build/img/james-r-130.jpg","f6b2563b0ff938106e3d7ee79604d812"],["build/img/jimmy-130.jpg","41a659dafecef9119d558031e67ea6b3"],["build/img/linked_in.svg","2f157df5fb5b5a3298440448dcf9319f"],["build/img/location-pin.svg","48679c65546eb3b1d57ee6829d89c80f"],["build/img/luke-130.jpg","7d37ff23b8f8181c7e7ea556c79d6b8d"],["build/img/matt-130.jpg","532ef625539d8d565c32c8babc6a0008"],["build/img/simon-130.jpg","80c18eaff1575cc38e73f5e4586d5534"],["build/img/smile.svg","5385473fea328dde0da81f316452c826"],["build/img/steve-130.jpg","ad906380b9df03b3b6ca79f6b818dd79"],["build/img/twitter.svg","f83cb819cbb9b1472ec98d0142ca2a35"],["build/img/up-arrow.svg","64995309440e38f45c5be2fba3e0deb9"],["build/img/wdots_circle_big.svg","010772eafb0135b92a08376e3165890f"],["build/img/wdots_rectangle_big.svg","08614e08adcb7503cdaec21a64546311"],["build/img/woods-1280.jpg","c16c222cb9cb13b6e922975efb257222"],["build/img/woods-480.jpg","089d56f965e04c26b301c35d11a3e0c5"],["build/img/woods-640.jpg","9984571560afd76fc4039017dd01612a"],["build/img/woods-960.jpg","5d7b4def6f460345a7fdbf036d64c11d"],["build/img/woods.jpg","e00ab6950e6b4edf7d98b95994d01ac5"],["build/js/main.js","8c8850a52b8b7876c6c284c907172181"]];
-var cacheName = 'sw-precache-v2-wdots.github.io-' + (self.registration ? self.registration.scope : '');
+var cacheName = 'sw-precache-v3-wdots.github.io-' + (self.registration ? self.registration.scope : '');
 
 
 var ignoreUrlParametersMatching = [/^utm_/];
@@ -53,6 +53,28 @@ var addDirectoryIndex = function (originalUrl, index) {
     return url.toString();
   };
 
+var cleanResponse = function (originalResponse) {
+    // If this is not a redirected response, then we don't have to do anything.
+    if (!originalResponse.redirected) {
+      return Promise.resolve(originalResponse);
+    }
+
+    // Firefox 50 and below doesn't support the Response.body stream, so we may
+    // need to read the entire body to memory as a Blob.
+    var bodyPromise = 'body' in originalResponse ?
+      Promise.resolve(originalResponse.body) :
+      originalResponse.blob();
+
+    return bodyPromise.then(function(body) {
+      // new Response() is happy when passed either a stream or a Blob.
+      return new Response(body, {
+        headers: originalResponse.headers,
+        status: originalResponse.status,
+        statusText: originalResponse.statusText
+      });
+    });
+  };
+
 var createCacheKey = function (originalUrl, paramName, paramValue,
                            dontCacheBustUrlsMatching) {
     // Create a new URL object to avoid modifying originalUrl.
@@ -61,7 +83,7 @@ var createCacheKey = function (originalUrl, paramName, paramValue,
     // If dontCacheBustUrlsMatching is not set, or if we don't have a match,
     // then add in the extra cache-busting URL parameter.
     if (!dontCacheBustUrlsMatching ||
-        !(url.toString().match(dontCacheBustUrlsMatching))) {
+        !(url.pathname.match(dontCacheBustUrlsMatching))) {
       url.search += (url.search ? '&' : '') +
         encodeURIComponent(paramName) + '=' + encodeURIComponent(paramValue);
     }
@@ -134,10 +156,19 @@ self.addEventListener('install', function(event) {
           Array.from(urlsToCacheKeys.values()).map(function(cacheKey) {
             // If we don't have a key matching url in the cache already, add it.
             if (!cachedUrls.has(cacheKey)) {
-              return cache.add(new Request(cacheKey, {
-                credentials: 'same-origin',
-                redirect: 'follow'
-              }));
+              var request = new Request(cacheKey, {credentials: 'same-origin'});
+              return fetch(request).then(function(response) {
+                // Bail out of installation unless we get back a 200 OK for
+                // every request.
+                if (!response.ok) {
+                  throw new Error('Request for ' + cacheKey + ' returned a ' +
+                    'response with status ' + response.status);
+                }
+
+                return cleanResponse(response).then(function(responseToCache) {
+                  return cache.put(cacheKey, responseToCache);
+                });
+              });
             }
           })
         );
