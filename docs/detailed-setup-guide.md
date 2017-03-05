@@ -83,10 +83,3 @@ $ git push origin my-new-feature
 
 Then go to [our Github repo](https://github.com/WDOTS/wdots.github.io) and create a pull request against the
 `integration` branch.
-
-```
-$ git push origin my-new-feature
-```
-
-Then go to [our Github repo](https://github.com/WDOTS/wdots.github.io) and create a pull request against the
-`integration` branch.
