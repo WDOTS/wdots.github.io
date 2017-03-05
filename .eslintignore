@@ -1,3 +1,4 @@
 src/js/vendor/
 build/
 service-worker.js
+src/js/scroll-it.js
