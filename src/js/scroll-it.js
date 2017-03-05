@@ -71,7 +71,9 @@ function scrollIt(element, duration, easing, callback) {
         body.scrollTop = (timeFunction * (destination - start)) + start;
 
         if (body.scrollTop === destination) {
-            callback();
+            if (typeof callback === 'function') {
+                callback();
+            }
             return;
         }
         requestAnimationFrame(scroll);
