@@ -32,4 +32,10 @@
     width: 48px;
     opacity: 0;
     cursor: pointer;
+    transition: .6s opacity;
+    transition-delay: .6s;
+}
+
+.footer__arrow__img--visible {
+    opacity: .7;
 }
