@@ -16,10 +16,6 @@ $(document).ready(function () {
         opacity: 1,
         top: '+=20'
     };
-    var scrollToTop = function () {
-        $('html, body').animate({ scrollTop: 0 }, 800);
-        return false;
-    };
     $(document).on('scroll', function handler() {
         fadeIntoBeing($arrow, fade, function callback() {
             $(document).off('scroll', handler);
@@ -30,6 +26,4 @@ $(document).ready(function () {
             $(document).off('scroll', handler);
         });
     });
-
-    $arrow.click(scrollToTop);
 });
