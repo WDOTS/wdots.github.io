@@ -4,7 +4,8 @@
         "import"
     ],
     "env": {
-        "browser": true
+        "browser": true,
+        "es6": false
     },
     "rules": {
         "indent": ["error", 4],
@@ -12,9 +13,11 @@
         "func-names": "off",
         "no-var": "off",
         "comma-dangle": "off",
+        "object-shorthand": "off",
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
     },
     "globals": {
-        "$": true
+        "$": true,
+        "scrollIt": true
     }
 }

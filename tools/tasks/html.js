@@ -14,7 +14,6 @@ module.exports = function html() {
     if (isDev()) {
         data.vendorPaths = {
             jquery: 'build/js/vendor/jquery-3.1.0.min.js',
-            jqueryEasing: 'build/js/vendor/jquery.easing.min.js',
             jqueryVisible: 'build/js/vendor/jquery.visible.min.js',
             html5Shiv: 'build/js/vendor/html5shiv.min.js',
             respond: 'build/js/vendor/respond.min.js',
@@ -23,7 +22,6 @@ module.exports = function html() {
     } else {
         data.vendorPaths = {
             jquery: '//unpkg.com/jquery@3.1.0/dist/jquery.min.js',
-            jqueryEasing: '//unpkg.com/jquery-easing@0.0.1/dist/jquery.easing.1.3.umd.min.js',
             jqueryVisible: '//cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js',
             html5Shiv: '//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js',
             respond: '//unpkg.com/respond.js@1.4.2/dest/respond.min.js',
