@@ -1,31 +1,18 @@
-function fadeIntoBeing(selection, animation, callback) {
-    if (selection.visible(true)) {
-        selection.delay(600).animate(animation);
-        callback();
-    }
-}
-
-function classyFade(selection, classy, callback) {
-    if (selection.visible(true)) {
-        selection.addClass(classy);
-        callback();
-    }
-}
-
 $(document).ready(function () {
-    var $arrow = $('.js-footer-arrow');
-    var $reasons = $('.reason');
-    var upAndEase = {
-        opacity: 1,
-        top: '+=20'
-    };
+    function classyFade(selection, classy, callback) {
+        if (selection.visible(true)) {
+            selection.addClass(classy);
+            callback();
+        }
+    }
+
     $(document).on('scroll', function handler() {
-        classyFade($arrow, 'footer__arrow__img--visible', function () {
+        classyFade($('.js-footer-arrow'), 'footer__arrow__img--visible', function callback() {
             $(document).off('scroll', handler);
         });
     });
     $(document).on('scroll', function handler() {
-        fadeIntoBeing($reasons, upAndEase, function callback() {
+        classyFade($('.reason'), 'reason--visible', function callback() {
             $(document).off('scroll', handler);
         });
     });
