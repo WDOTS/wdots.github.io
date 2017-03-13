@@ -1,5 +1,10 @@
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .speaker {
-    display: inline-block;
     width: 100%;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -18,7 +23,6 @@
 /* iPad Portrait */
 @media (min-width: $width-ipad-min) and (max-width: $width-ipad-max) {
     .speaker {
-        margin-right: 7px;
         width: 49%;
     }
 }
@@ -27,14 +31,12 @@
 @media (min-width: $width-ipad-landscape-min) and (max-width: $width-ipad-landscape-max) {
     .speaker {
         width: 49%;
-        margin-right: 9px;
     }
 }
 
 @media (min-width: $width-desktop-min) {
     .speaker {
         width: 31.33333333%;
-        margin-right: 20px;
     }
 }
 
