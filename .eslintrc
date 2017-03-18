@@ -18,6 +18,7 @@
     },
     "globals": {
         "$": true,
-        "scrollIt": true
+        "scrollIt": true,
+        "isElementInViewport": true
     }
 }
