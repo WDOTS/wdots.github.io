@@ -7,7 +7,8 @@ $(function () {
     });
 
     $('.js-footer-arrow').on('click', function () {
-        // TODO: replace with scrollIt
-        $('html, body').animate({ scrollTop: 0 }, 800);
+        var header = $('.hero-header')[0];
+
+        scrollIt(header, 800, 'easeInOutQuad');
     });
 });
