@@ -13,12 +13,12 @@ module.exports = function html() {
 
     if (isDev()) {
         data.vendorPaths = {
-            jquery: 'build/js/vendor/jquery-3.1.0.min.js',
+            zepto: 'build/js/vendor/zepto.min.js',
             addToCalendarJs: 'build/js/vendor/atc.min.js',
         };
     } else {
         data.vendorPaths = {
-            jquery: '//unpkg.com/jquery@3.1.0/dist/jquery.min.js',
+            zepto: '//unpkg.com/zepto@1.2.0/dist/zepto.min.js',
             addToCalendarJs: '//addtocalendar.com/atc/1.5/atc.min.js',
         };
     }
