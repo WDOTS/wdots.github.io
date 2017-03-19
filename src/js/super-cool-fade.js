@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function classyFade(selection, classy, callback) {
-        if (selection.visible(true)) {
+        if (isElementInViewport(selection[0])) {
             selection.addClass(classy);
             callback();
         }
