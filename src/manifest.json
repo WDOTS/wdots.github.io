@@ -1,0 +1,26 @@
+{
+  "name": "Web Devs of the Shire",
+  "short_name": "WDOTS",
+  "display": "minimal-ui",
+  "orientation": "portrait",
+  "start_url": "/",
+  "background_color": "#393938",
+  "theme_color": "#393938",
+  "icons": [
+    {
+      "src": "<%= assetPath %>/img/manifest-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "<%= assetPath %>/img/manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "<%= assetPath %>/img/manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
