@@ -27,12 +27,12 @@
         text-align: center;
     }
     .footer {
-        text-align: center;
         padding: 40px 20px;
+        text-align: center;
     }
     .footer__arrow {
-        text-align: center;
         margin-top: 20px;
+        text-align: center;
     }
 }
 
@@ -58,9 +58,6 @@
 
 /* iPhone 4 */
 @media (max-width: $width-iphone-4-max) {
-    .hero-header .logo {
-        height: 110px;
-    }
     .hero-header h1 {
         font-size: 2em;
     }

@@ -6,22 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
         content="WDOTS is a web developer meetup based in Gerrards Cross, Buckinghamshire. Join us for all things development, design and web for discussion, talks and more">
+  <meta name="theme-color" content="#393938">
   <title>Web Devs of the Shire</title>
-  <!--[if lt IE 9]>
-  <script src="<%= vendorPaths.html5Shiv %>"></script>
-  <script src="<%= vendorPaths.respond %>"></script>
-  <![endif]-->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js');
     }
   </script>
-  <script src="<%= vendorPaths.jquery %>" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-          crossorigin="anonymous" defer></script>
-  <script src="<%= vendorPaths.jqueryVisible %>" defer></script>
+  <script src="<%= vendorPaths.zepto %>" defer></script>
   <script src="<%= vendorPaths.addToCalendarJs %>" defer></script>
   <script src="<%= assetPath %>/js/main.js" defer></script>
 
+  <link href="manifest.json" rel="manifest">
   <link href="<%= assetPath %>/img/favicon.ico" rel="shortcut icon">
   <link href="<%= cssPath %>/css/style.css" rel="stylesheet">
 </head>
@@ -72,12 +68,12 @@
           <%= assetPath %>/img/woods-640.jpg 640w,
           <%= assetPath %>/img/woods-960.jpg 960w,
           <%= assetPath %>/img/woods-1280.jpg 1280w,
-          <%= assetPath %>/img/woods.jpg
+          <%= assetPath %>/img/woods.jpg 1920w
         ">
     <div class="hero-header__content">
       <img src="/img/wdots_circle_big.svg" class="hero-header__logo">
       <h1 class="hero-header__title">Web Devs of the Shire</h1>
-      <h3 class="hero-header__description">Join our monthly meetup for a drink, discussion and development.</h3>
+      <h3 class="hero-header__description">Join our meetup for a drink, discussion and development.</h3>
     </div>
   </div>
   <!-- End: Header -->
@@ -91,15 +87,15 @@
     <div class="next-meetup__wrapper">
       <div class="next-meetup__info">
         <h3 class="next-meetup__info__heading">WDOTS Social</h3>
-        <p>No agenda this month, meet for a beer or non-alcolohic beverage to catch up, talk code, show off a project or start a new one!</p>
+        <p>No agenda this month, meet for a savoury snack and a beverage to catch up, talk code, show off a project or start a new one!</p>
       </div><div class="next-meetup__where-and-when">
-        <h4>Thursday 26th January</h4>
+        <h4>Thursday 13th April</h4>
         <h4>18:45 - 21:00</h4>
         <h4><img src="/img/location-pin.svg" class="icon">The Bull, Oxford Road, Gerrards Cross, Buckinghamshire, SL9 7PA</h4>
         <span class="addtocalendar atc-style-green socialButton">
           <var class="atc_event">
-              <var class="atc_date_start">2017-01-26 18:45:00</var>
-              <var class="atc_date_end">2017-01-26 21:00:00</var>
+              <var class="atc_date_start">2017-04-13 18:45:00</var>
+              <var class="atc_date_end">2017-04-13 21:00:00</var>
               <var class="atc_timezone">Europe/London</var>
               <var class="atc_title">Web Devs of The Shire</var>
               <var class="atc_description">Join us for all things Development, Design and Web for discussion, talks and more. If you have any questions please join our Slack chat</var>
@@ -121,10 +117,10 @@
     <p>WDOTS is here to bring together innovative developers, heroic testers and pioneering founders on a quest to
       make the world a better place.</p>
 
-    <p>We host monthly events ranging from lightning talks and presentations to hacks and project inceptions.</p>
+    <p>We host regular events ranging from lightning talks and presentations to hacks and project inceptions.</p>
 
     <p>So join us for an evening of discussion, code and the occasional moment of brilliance over a mead and a bit of
-      pipe weed once every month in and around Gerrards Cross, Buckinghamshire.</p>
+      pipe weed in and around Gerrards Cross, Buckinghamshire.</p>
   </section>
   <!-- End: About -->
   <!-- Start: Desc -->
@@ -138,8 +134,8 @@
     </div><div class="reason">
       <img src="/img/chat.svg" class="reason__img" role="img" aria-label="Speech bubble icon">
       <h3>Range of Topics</h3>
-      <p>With a vast range of sources to draw from, each month different discussions and our very own 'stand-up' takes
-        place spanning languages, projects and learning.</p>
+      <p>With a vast range of sources to draw from, we discuss programming languages, projects and learning, design,
+        data and information architecture.</p>
     </div><div class="reason">
       <img src="/img/compass.svg" class="reason__img" role="img" aria-label="Compass icon">
       <h3>Local to you</h3>
@@ -152,162 +148,208 @@
   <!-- Start: Speakers -->
   <section class="section" id="speakers">
     <h2 class="section__title">Meet some Members</h2>
-    <div class="speaker">
-      <img src="<%= assetPath %>/img/simon-130.jpg" class="speaker__img" alt="Photograph of Simon Adcock">
-      <h3>Simon Adcock</h3>
-      <p>Internet Wizard</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/SiAdcock" target="_blank"><img
-            role="img" aria-label="Simon Adcock on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://twitter.com/siadcock" target="_blank"><img
-            role="img" aria-label="Simon Adcock on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.linkedin.com/in/sjadcock" target="_blank"><img
-            role="img" aria-label="Simon Adcock on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/matt-130.jpg" class="speaker__img" alt="Photograph of Matt Platts">
-      <h3>Matt Platts</h3>
-      <p>Pearl Diver</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/matt-platts" target="_blank"><img
-            role="img" aria-label="Matt Platts on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.linkedin.com/in/mattplatts" target="_blank"><img
-            role="img" aria-label="Matt Platts on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/jimmy-130.jpg" class="speaker__img" alt="Photograph of Jimmy Names">
-      <h3>Jimmy Names</h3>
-      <p>Dev Padewan</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/jimmynames" target="_blank"><img
-            role="img" aria-label="Jimmy Names on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://twitter.com/namescodes" target="_blank"><img
-            role="img" aria-label="Jimmy Names on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.linkedin.com/in/jimmynames" target="_blank"><img
-            role="img" aria-label="Jimmy Names on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/james-130.jpg" class="speaker__img" alt="Photograph of James Monger">
-      <h3>James Monger</h3>
-      <p>JS Master</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/Jameskmonger" target="_blank"><img
-            role="img" aria-label="James Monger on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://twitter.com/jameskmonger" target="_blank"><img
-            role="img" aria-label="James Monger on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
-        </li>
+
+    <div class="speakers">
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/simon-130.jpg" class="speaker__img" alt="Photograph of Simon Adcock">
+        <h3>Simon Adcock</h3>
+        <p>Internet Wizard</p>
+        <ul class="social">
           <li class="social__item">
-          <a href="https://www.linkedin.com/in/james-monger-20740b79" target="_blank"><img
-            role="img" aria-label="James Monger on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/steve-130.jpg" class="speaker__img" alt="Illustration of Steve Knight">
-      <h3>Steve Knight</h3>
-      <p>Sir JS</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="#" target="_blank"><img
-            role="img" aria-label="Steve Knight on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="#" target="_blank"><img
-            role="img" aria-label="Steve Knight on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/luke-130.jpg" class="speaker__img" alt="Photograph of Luke Lehane">
-      <h3>Luke Lehane</h3>
-      <p>Pixel Perfectionist</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/lehanism" target="_blank"><img
-            role="img" aria-label="Luke Lehane on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://twitter.com/lehanism" target="_blank"><img
-            role="img" aria-label="Luke Lehane on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.linkedin.com/in/lukelehane" target="_blank"><img
-            role="img" aria-label="Luke Lehane on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/bart-130.jpg" class="speaker__img" alt="Photograph of Bart Nowak">
-      <h3>Bart Nowak</h3>
-      <p>Design Lord</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/BartNowak" target="_blank"><img
-            role="img" aria-label="Bart Nowak on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.linkedin.com/in/bart-nowak-205b3959" target="_blank"><img
-            role="img" aria-label="Bart Nowak on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/james-r-130.jpg" class="speaker__img" alt="Photograph of James Richford">
-      <h3>James Richford</h3>
-      <p>Shiny Grasshopper</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/jamesrichford" target="_blank"><img
-            role="img" aria-label="James Richford on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/aimee-130.jpg" class="speaker__img" alt="Photograph of Aimee Tacchi">
-      <h3>Aimee Tacchi</h3>
-      <p>CSS Lover</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/drkxangel84" target="_blank"><img
-            role="img" aria-label="Aimee Tacchi on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-         <li class="social__item">
-          <a href="https://twitter.com/aimeetacchi" target="_blank"><img
-            role="img" aria-label="Aimee Tacchi on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
-        </li>
-         <li class="social__item">
-          <a href="https://www.linkedin.com/in/aimeetacchi/" target="_blank"><img
-            role="img" aria-label="Aimee Tacchi on LinkedIn" src="/img/linked_in.svg" class="social__item__img"></a>
-        </li>
-      </ul>
-    </div><div class="speaker">
-      <img src="<%= assetPath %>/img/chris-130.jpeg" class="speaker__img" alt="Photograph of Christopher Geary">
-      <h3>Christopher Geary</h3>
-      <p>Performance Evangelist</p>
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://github.com/chrisgeary92" rel="noopener" target="_blank"><img
-            role="img" aria-label="Christopher Geary on github" src="/img/github.svg" class="social__item__img"></a>
-        </li>
-         <li class="social__item">
-          <a href="https://twitter.com/crgeary" rel="noopener" target="_blank"><img
-            role="img" aria-label="Christopher Geary on Twitter" src="/img/twitter.svg" class="social__item__img"></a>
-        </li>
-      </ul>
+            <a href="https://github.com/SiAdcock" rel="noopener" target="_blank">
+              <img role="img" aria-label="Simon Adcock on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://twitter.com/siadcock" rel="noopener" target="_blank">
+              <img role="img" aria-label="Simon Adcock on Twitter" src="/img/twitter.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.linkedin.com/in/sjadcock" rel="noopener" target="_blank">
+              <img role="img" aria-label="Simon Adcock on LinkedIn" src="/img/linked_in.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/matt-130.jpg" class="speaker__img" alt="Photograph of Matt Platts">
+        <h3>Matt Platts</h3>
+        <p>Pearl Diver</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/matt-platts" rel="noopener" target="_blank">
+              <img role="img" aria-label="Matt Platts on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.linkedin.com/in/mattplatts" rel="noopener" target="_blank">
+              <img role="img" aria-label="Matt Platts on LinkedIn" src="/img/linked_in.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/jimmy-130.jpg" class="speaker__img" alt="Photograph of Jimmy Names">
+        <h3>Jimmy Names</h3>
+        <p>Dev Padewan</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/jimmynames" rel="noopener" target="_blank">
+              <img role="img" aria-label="Jimmy Names on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://twitter.com/namescodes" rel="noopener" target="_blank">
+              <img role="img" aria-label="Jimmy Names on Twitter" src="/img/twitter.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.linkedin.com/in/jimmynames" rel="noopener" target="_blank">
+              <img role="img" aria-label="Jimmy Names on LinkedIn" src="/img/linked_in.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/james-130.jpg" class="speaker__img" alt="Photograph of James Monger">
+        <h3>James Monger</h3>
+        <p>JS Master</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/Jameskmonger" rel="noopener" target="_blank">
+              <img role="img" aria-label="James Monger on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://twitter.com/jameskmonger" rel="noopener" target="_blank">
+              <img role="img" aria-label="James Monger on Twitter" src="/img/twitter.svg" class="social__item__img">
+            </a>
+          </li>
+            <li class="social__item">
+            <a href="https://www.linkedin.com/in/james-monger-20740b79" rel="noopener" target="_blank">
+              <img role="img" aria-label="James Monger on LinkedIn" src="/img/linked_in.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/steve-130.jpg" class="speaker__img" alt="Illustration of Steve Knight">
+        <h3>Steve Knight</h3>
+        <p>Sir JS</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/steverjknight" rel="noopener" target="_blank">
+              <img role="img" aria-label="Steve Knight on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.linkedin.com/in/steverjknight/" rel="noopener" target="_blank">
+              <img role="img" aria-label="Steve Knight on LinkedIn" src="/img/linked_in.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/luke-130.jpg" class="speaker__img" alt="Photograph of Luke Lehane">
+        <h3>Luke Lehane</h3>
+        <p>Pixel Perfectionist</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/lehanism" rel="noopener" target="_blank">
+              <img role="img" aria-label="Luke Lehane on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://twitter.com/lehanism" rel="noopener" target="_blank">
+              <img role="img" aria-label="Luke Lehane on Twitter" src="/img/twitter.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.linkedin.com/in/lukelehane" rel="noopener" target="_blank">
+              <img role="img" aria-label="Luke Lehane on LinkedIn" src="/img/linked_in.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/bart-130.jpg" class="speaker__img" alt="Photograph of Bart Nowak">
+        <h3>Bart Nowak</h3>
+        <p>Design Lord</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/BartNowak" rel="noopener" target="_blank">
+              <img role="img" aria-label="Bart Nowak on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.linkedin.com/in/bart-nowak-205b3959" rel="noopener" target="_blank">
+              <img role="img" aria-label="Bart Nowak on LinkedIn" src="/img/linked_in.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/james-r-130.jpg" class="speaker__img" alt="Photograph of James Richford">
+        <h3>James Richford</h3>
+        <p>Shiny Grasshopper</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/jamesrichford" rel="noopener" target="_blank">
+              <img role="img" aria-label="James Richford on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/aimee-130.jpg" class="speaker__img" alt="Photograph of Aimee Tacchi">
+        <h3>Aimee Tacchi</h3>
+        <p>CSS Lover</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/darkxangel84" rel="noopener" target="_blank">
+              <img role="img" aria-label="Aimee Tacchi on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+           <li class="social__item">
+            <a href="https://twitter.com/aimeetacchi" rel="noopener" target="_blank">
+              <img role="img" aria-label="Aimee Tacchi on Twitter" src="/img/twitter.svg" class="social__item__img">
+            </a>
+          </li>
+           <li class="social__item">
+            <a href="https://www.linkedin.com/in/aimeetacchi/" rel="noopener" target="_blank">
+              <img role="img" aria-label="Aimee Tacchi on LinkedIn" src="/img/linked_in.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="speaker">
+        <img src="<%= assetPath %>/img/chris-130.jpeg" class="speaker__img" alt="Photograph of Christopher Geary">
+        <h3>Christopher Geary</h3>
+        <p>Performance Evangelist</p>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/chrisgeary92" rel="noopener" target="_blank">
+              <img role="img" aria-label="Christopher Geary on github" src="/img/github.svg" class="social__item__img">
+            </a>
+          </li>
+           <li class="social__item">
+            <a href="https://twitter.com/crgeary" rel="noopener" target="_blank">
+              <img role="img" aria-label="Christopher Geary on Twitter" src="/img/twitter.svg" class="social__item__img">
+            </a>
+          </li>
+        </ul>
+    </div>
+
     </div>
   </section>
   <!-- End: Speakers -->
@@ -327,8 +369,8 @@
       <h3 class="join-in__section__title">Meetup</h3>
       <span class="addtocalendar atc-style-green join-in__section__button">
           <var class="atc_event">
-              <var class="atc_date_start">2017-01-26 18:45:00</var>
-              <var class="atc_date_end">2017-01-26 21:00:00</var>
+              <var class="atc_date_start">2017-04-13 18:45:00</var>
+              <var class="atc_date_end">2017-04-13 21:00:00</var>
               <var class="atc_timezone">Europe/London</var>
               <var class="atc_title">Web Devs of The Shire</var>
               <var class="atc_description">Join us for all things Development, Design and Web for discussion, talks and more. If you have any questions please join our Slack chat</var>

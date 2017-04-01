@@ -40,4 +40,5 @@ jspm_packages
 
 build
 /index.html
+/manifest.json
 service-worker.js

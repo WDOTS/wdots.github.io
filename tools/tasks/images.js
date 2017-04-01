@@ -1,6 +1,8 @@
-const shell = require('shelljs');
+const imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
 
 module.exports = function images() {
-    shell.mkdir('-p', 'build/img/');
-    shell.cp('src/img/*', 'build/img/');
+    return gulp.src('src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/img/'));
 };

@@ -14,10 +14,12 @@
         "no-var": "off",
         "comma-dangle": "off",
         "object-shorthand": "off",
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "linebreak-style": "off"
     },
     "globals": {
         "$": true,
-        "scrollIt": true
+        "scrollIt": true,
+        "isElementInViewport": true
     }
 }
