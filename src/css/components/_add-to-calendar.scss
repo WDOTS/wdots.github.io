@@ -1,26 +1,26 @@
 .atc-style-green {
     .atcb-list {
-        width: 100%;
         background: #ffffff;
         border: 1px solid #bababa;
         border-radius: 2px;
         box-shadow: 0 0 5px #aaaaaa;
+        width: 100%;
     }
 
     .atcb-link {
-        border-radius: 4px;
-        padding: 15px 40px;
-        text-transform: uppercase;
-        font-weight: 600;
-        line-height: 1.3333333;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        touch-action: manipulation;
-        cursor: pointer;
         -webkit-user-select: none;
         border: 1px solid transparent;
-
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        line-height: 1.3333333;
+        padding: 15px 40px;
+        text-align: center;
+        text-transform: uppercase;
+        touch-action: manipulation;
+        vertical-align: middle;
+        white-space: nowrap;
+        
         @include button-context($button-success-background, $button-success-text, $button-success-border);
     }
 
@@ -31,11 +31,11 @@
     }
 
     .atcb-item-link {
-        font-size: .875em;
         color: #000000;
-        text-decoration: none;
+        font-size: .875em;
         outline: none;
         padding: 5px 15px;
+        text-decoration: none;
         transition: none;
 
         &:hover {
