@@ -16,8 +16,6 @@
 }
 
 .side-menu__item__title {
-    -moz-transition: -moz-transform .2s, opacity .2s;
-    -webkit-transition: -webkit-transform .2s, opacity .2s;
     background-color: #659d32;
     border-radius: 3px;
     color: #ffffff;
@@ -28,15 +26,13 @@
     padding: 3px 10px;
     text-transform: uppercase;
     transition: transform .2s, opacity .2s;
-    
+
     a:hover & {
         opacity: 1;
     }
 }
 
 .side-menu__item__dot {
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
     background-color: #659d32;
     border-radius: 2em;
     height: 10px;

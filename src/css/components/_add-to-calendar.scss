@@ -8,7 +8,6 @@
     }
 
     .atcb-link {
-        -webkit-user-select: none;
         border: 1px solid transparent;
         border-radius: 4px;
         cursor: pointer;
@@ -20,7 +19,7 @@
         touch-action: manipulation;
         vertical-align: middle;
         white-space: nowrap;
-        
+
         @include button-context($button-success-background, $button-success-text, $button-success-border);
     }
 
