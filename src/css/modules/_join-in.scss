@@ -1,7 +1,7 @@
 .join-in {
     background-color: #c0d9af;
-    padding-top: 50px;
     padding-bottom: 75px;
+    padding-top: 50px;
 }
 
 .join-in__title {
@@ -10,10 +10,10 @@
 
 .join-in__section {
     display: inline-block;
-    width: 100%;
-    vertical-align: top;
-    padding: 2em;
     margin: 0 auto;
+    padding: 2em;
+    vertical-align: top;
+    width: 100%;
 }
 
 @media (min-width: 768px) {

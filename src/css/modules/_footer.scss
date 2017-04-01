@@ -1,11 +1,11 @@
 .footer {
-    border-top: 1px #545454 solid;
+    align-items: center;
     background-color: #2a2a2a;
+    border-top: 1px #545454 solid;
     color: #939393;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 20px;
 }
 
 .footer__logo, .footer__arrow {
@@ -35,12 +35,12 @@
 }
 
 .footer__arrow__img {
-    height: 32px;
-    width: 48px;
-    opacity: 0;
     cursor: pointer;
+    height: 32px;
+    opacity: 0;
     transition: .6s opacity;
     transition-delay: .6s;
+    width: 48px;
 }
 
 .footer__arrow__img--visible {

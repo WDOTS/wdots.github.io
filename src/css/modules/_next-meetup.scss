@@ -6,21 +6,21 @@
     height: 0;
 
     &::before {
+        background-color: #c5e3bf;
         content: '';
         display: block;
-        background-color: #c5e3bf;
         height: 20px;
     }
 }
 
 .next-meetup__banner__heading {
-    display: inline-block;
-    position: relative;
-    top: -33px;
     background-color: #ffffff;
     border: 3px dotted green;
+    display: inline-block;
     margin: 0;
     padding: 4px 48px;
+    position: relative;
+    top: -33px;
 }
 
 .next-meetup__info, .next-meetup__where-and-when {
@@ -28,8 +28,8 @@
 }
 
 .next-meetup__info {
-    text-align: left;
     margin-top: 20px;
+    text-align: left;
 
     p {
         margin: 1em 0;
@@ -37,10 +37,10 @@
 }
 
 .next-meetup__info__heading {
-    display: inline-block;
-    text-align: left;
     border-bottom: solid 3px green;
+    display: inline-block;
     line-height: 50px;
+    text-align: left;
 }
 
 @media (min-width: $width-ipad-landscape-min) {
