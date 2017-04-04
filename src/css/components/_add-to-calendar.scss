@@ -1,13 +1,22 @@
+$add-to-calendar-list-background: #fff;
+$add-to-calendar-list-border: #bababa;
+$add-to-calendar-list-shadow: #aaa;
+$add-to-calendar-item-hover-background: #5cb85c;
+$add-to-calendar-item-color: #000;
+$add-to-calendar-item-hover-color: #fff;
+
 .atc-style-green {
     .atcb-list {
-        background: #ffffff;
-        border: 1px solid #bababa;
+        background: $add-to-calendar-list-background;
+        border: 1px solid $add-to-calendar-list-border;
         border-radius: 2px;
-        box-shadow: 0 0 5px #aaaaaa;
+        box-shadow: 0 0 5px $add-to-calendar-list-shadow;
         width: 100%;
     }
 
     .atcb-link {
+        @include button-context($button-success-background, $button-success-text, $button-success-border);
+
         border: 1px solid transparent;
         border-radius: 4px;
         cursor: pointer;
@@ -19,18 +28,16 @@
         touch-action: manipulation;
         vertical-align: middle;
         white-space: nowrap;
-
-        @include button-context($button-success-background, $button-success-text, $button-success-border);
     }
 
     .atcb-item {
         &:hover {
-            background: #5cb85c;
+            background: $add-to-calendar-item-hover-background;
         }
     }
 
     .atcb-item-link {
-        color: #000000;
+        color: $add-to-calendar-item-color;
         font-size: .875em;
         outline: none;
         padding: 5px 15px;
@@ -38,7 +45,7 @@
         transition: none;
 
         &:hover {
-            color: #ffffff;
+            color: $add-to-calendar-item-hover-color;
         }
     }
 }
