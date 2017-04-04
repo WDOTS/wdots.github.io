@@ -1,9 +1,11 @@
+$body-color: #404142;
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    color: #404142;
+    color: $body-color;
     font-family: 'Dosis', sans-serif;
     font-size: 16px;
     letter-spacing: .8px;
