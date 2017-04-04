@@ -20,7 +20,7 @@ You will need:
 Install dependencies:
 
 ```
-$ yarn production=false
+$ yarn install --production=false
 ```
 
 Start the dev server:
