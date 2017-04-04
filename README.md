@@ -20,7 +20,7 @@ You will need:
 Install dependencies:
 
 ```
-$ yarn install
+$ yarn install production=false
 ```
 
 Start the dev server:
@@ -34,7 +34,7 @@ Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Contribution guidelines
 
-- Use [Yarn](https://yarnpkg.com/) to add or remove any dependencies, and remember to check in changes to the 
+- Use [Yarn](https://yarnpkg.com/) to add or remove any dependencies, and remember to check in changes to the
  `yarn.lock` file
 - Before committing, please run `npm run lint` and ensure there are no linting errors or warnings
 - Before raising a pull request please test that the website works in the latest version
