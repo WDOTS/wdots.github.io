@@ -1,3 +1,5 @@
+$social-item-img-fill: #000;
+
 .social__item {
     display: inline-block;
     list-style: none;
@@ -11,7 +13,7 @@
 }
 
 .social__item__img {
-    fill: #000000;
+    fill: $social-item-img-fill;
     height: 16px;
     width: 16px;
 }
