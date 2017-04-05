@@ -2,7 +2,10 @@
     background-color: $background;
     border-color: $border;
     color: $text;
-    &:hover, &:active, &:focus {
+
+    &:hover,
+    &:active,
+    &:focus {
         background-color: darken($background, 10%);
         border-color: darken($border, 10%);
     }

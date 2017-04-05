@@ -19,49 +19,57 @@
 @import 'modules/join-in';
 @import 'modules/footer';
 
-/* Mobile */
+// Mobile
 
 @media (max-width: $width-mobile-max) {
     .hero-header {
-        padding: 3em 1em 1em 1em;
+        padding: 3em 1em 1em;
         text-align: center;
     }
+
     .footer {
         padding: 40px 20px;
         text-align: center;
     }
+
     .footer__arrow {
         margin-top: 20px;
         text-align: center;
     }
 }
 
-/* iPad Portrait */
+// iPad Portrait
 
 @media (min-width: $width-ipad-min) and (max-width: $width-ipad-max) {
     .hero-header {
-        padding: 3em 1em 1em 1em;
+        padding: 3em 1em 1em;
         text-align: center;
     }
 }
 
-/* iPhone 5 and below */
+// iPhone 5 and below
 
 @media (max-width: $width-iphone-5-max) {
-    .hero-header h1 {
-        font-size: 2em;
-    }
-    .hero-header h3 {
-        font-size: 19px;
+    .hero-header {
+        h1 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 19px;
+        }
     }
 }
 
-/* iPhone 4 */
+// iPhone 4
 @media (max-width: $width-iphone-4-max) {
-    .hero-header h1 {
-        font-size: 2em;
-    }
-    .hero-header h3 {
-        font-size: 19px;
+    .hero-header {
+        h1 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 19px;
+        }
     }
 }

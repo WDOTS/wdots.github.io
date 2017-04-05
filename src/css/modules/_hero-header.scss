@@ -1,6 +1,10 @@
+$hero-header-background: #234823;
+$hero-header-text: #fff;
+$hero-header-description-shadow: #000;
+
 .hero-header {
-    background-color: #234823;
-    color: #ffffff;
+    background-color: $hero-header-background;
+    color: $hero-header-text;
     min-height: 600px;
     overflow: hidden;
     padding: 5em;
@@ -27,7 +31,7 @@
 .hero-header__title {
     font-size: 4em;
     font-weight: 300;
-    margin: 1em 0 0 0;
+    margin: 1em 0 0;
 }
 
 .hero-header__description {
@@ -35,5 +39,5 @@
     letter-spacing: 1px;
     margin: 2em 0;
     opacity: .9;
-    text-shadow: 1px 1px #000000;
+    text-shadow: 1px 1px $hero-header-description-shadow;
 }

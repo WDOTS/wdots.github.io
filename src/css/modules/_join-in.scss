@@ -1,5 +1,7 @@
+$join-in-background: #c0d9af;
+
 .join-in {
-    background-color: #c0d9af;
+    background-color: $join-in-background;
     padding-bottom: 75px;
     padding-top: 50px;
 }
