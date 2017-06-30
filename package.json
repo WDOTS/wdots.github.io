@@ -49,7 +49,7 @@
     "megalog": "^0.1.0",
     "mkdirp": "^0.5.1",
     "pre-commit": "^1.1.3",
-    "run-sequence": "^1.2.2",
+    "run-sequence": "^2.0.0",
     "sass-lint": "^1.10.2",
     "shelljs": "^0.7.3",
     "sw-precache": "^5.0.0"
