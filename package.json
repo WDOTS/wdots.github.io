@@ -28,7 +28,7 @@
     "lint"
   ],
   "devDependencies": {
-    "autoprefixer": "^7.0.0",
+    "autoprefixer": "^7.1.2",
     "browser-sync": "^2.13.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
