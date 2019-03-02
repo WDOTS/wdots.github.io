@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - '6.9'
-install: yarn install --production=false  
+install: yarn install --production=false
 before_script: npm run lint
 script: npm run build
 after_success: bash ./scripts/deploy.sh
@@ -14,3 +14,4 @@ env:
   - ENCRYPTION_LABEL: 0601d1c19287
   - COMMIT_AUTHOR_LABEL: simonadcock2@gmail.com
   - NODE_ENV: production
+secure: rgdpPXQeTH+MYoCPaVttlr1mjYbxHLdZF1hGDGMl0GRn6sz8+7HoR6YMTNvmAC8gS0OitB/y7PzSqR/FMd3bhKV7fVg8MXgCWnAY2KH2uPtrKeZO3SF0LHFl1FFb9gu5pN4OChhOV251ud8/ARfl6QdvhkUj+FLhmfVnIs69yV9L4I2+/Jay9OWdOrH5sn76NbVB1ZzLp377Sf1zjjjsdVudgr4RiIdCG+UN/dvB3bNOVVhSP40a0Tkdzxq/960PMD9zopQeIvpt2RNabfudCOw8bHCYOxnDgl2x09eFi/RcUaW4NU6IT6gz3mR1UCewNKoj/VQY8Z6cr1o0dlw2VAWXbsZD7nl/k07bblU16TJjWE481OjvhBcb0s+N+S0pVV28GwLSb6SLaL9XQ+Dui4uzMRIbi0AZbusgsXFo7ilobSFHSmAp1U1cqToJuhuYmF9IComsXRWI7HFPdt2LS0jsLlbOLHbcUCi+UdUHQgjBN0VjpJUQTO5I/faaAJEh7L+E2jJcWh36b2Zcb6rrSZVM+Olt+28lE+oTI4E1C1NvRbvLu4yJCzAH+7s/SUSVQHYnZzaR/rEyo5K8KzZbFYitDz0C8Rh81D5tY1LURRHzhHFfsvIHHjnMQYA2uuI1HqSc+iCI3khmo1HB2Gen0TGeFhD+8diQtNCR+kUjd/g=
